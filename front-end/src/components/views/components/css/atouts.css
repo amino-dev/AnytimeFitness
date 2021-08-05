@@ -1,0 +1,19 @@
+.desc {
+    color: #666;
+}
+  
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.cards>* {
+    flex: 25%;
+}
+
+hr {
+    max-width: 50px;
+}
+
+
+

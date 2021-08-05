@@ -69,14 +69,14 @@ router.get(
 router.get('/getAll',user.getAll)
 
 // Get a user
-router.get('/:id',user.getUser)
+router.get('/get/:id',user.getUser)
 
 
 // Delete a user
-router.delete('/:id',user.delete)
+router.delete('/delete/:id',user.delete)
 
 
 // Update a user
-router.put('/:id',user.update)
+router.put('/update/:id',user.update)
 
 module.exports = router;

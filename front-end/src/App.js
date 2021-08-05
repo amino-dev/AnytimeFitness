@@ -1,10 +1,10 @@
 
 import './App.css';
 import {BrowserRouter, Route} from "react-router-dom"
-import Home from './components/views/Home';
-import Contact from './components/views/contact';
-import About from './components/views/about';
-import Coach from './components/views/coachs';
+import Home from './components/views/pages/home';
+import Contact from './components/views/pages/contact';
+import About from './components/views/pages/about'
+import Coach from './components/views/pages/coachs';
 
 function App() {
   return (
