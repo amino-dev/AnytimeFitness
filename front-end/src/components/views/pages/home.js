@@ -8,6 +8,7 @@ import { Link } from "react-router-dom"
 import Atouts from "../components/atouts"
 import About from "../components/about"
 import Offers from "../components/offer"
+import Explication from "../components/explication"
 
 
 
@@ -38,6 +39,7 @@ function Home(){
     <About/>
     <Atouts/>
     <Offers/>
+    <Explication/>
     <Footer/>
   
 </div>

@@ -19,15 +19,15 @@ Pour des questions spécifiques ou personnelles nos vous invitons à nous poser 
  </Col>
  <Col lg={3} xs={12} sm={12}>
 
- <h5 className="pt-4"><b>Contact</b></h5>
+ <h5 className="pt-4 footer-title"><b>Contact</b></h5>
  <dl className="ml-3 mt-4">
-    <dd className="mb-3"><FaMailBulk className="mr-3"/>samet.amin@yahoo.fr</dd>
-    <dd className="mb-3"><FaPhoneAlt className="mr-3"/>+216 22 917 360</dd>
-    <dd className="mb-3"><FaClock className="mr-3"/>Appel de 9h à 22h</dd>
+    <dd className="mb-3 footer-contact"><FaMailBulk className="mr-3"/>samet.amin@yahoo.fr</dd>
+    <dd className="mb-3 footer-contact"><FaPhoneAlt className="mr-3"/>+216 22 917 360</dd>
+    <dd className="mb-3 footer-contact"><FaClock className="mr-3"/>Appel de 9h à 22h</dd>
  </dl>
  </Col>
  <Col lg={2} xs={12} sm={12}>
-   <h5 className="pt-4"><b>Navigation</b></h5>
+   <h5 className="pt-4 footer-title"><b>Navigation</b></h5>
     <Link className="nav-link my-auto" to="/">Coaching sportif</Link>
     <Link className="nav-link my-auto" to="/a-propos">A propos</Link>
     <Link className="nav-link my-auto" to="/nos-coachs">Nos coachs</Link>
@@ -35,7 +35,7 @@ Pour des questions spécifiques ou personnelles nos vous invitons à nous poser 
  </Col>
  <Col lg={2} xs={12} sm={12}>
 
- <h5 className="pt-4"><b>Réseau</b></h5>
+ <h5 className="pt-4 footer-title"><b>Réseau</b></h5>
 
  <div className="social d-flex justify-content-evenly ml-3 mt-3">
    <a href="https://www.facebook.com/" target="_blank"><FaFacebookSquare className="mr-3" /></a>
@@ -44,9 +44,9 @@ Pour des questions spécifiques ou personnelles nos vous invitons à nous poser 
   </div>
  </Col>
 </Row>
-<hr className="mt-5 mb-3" color="#dadada " />
+<hr className="mt-5 mb-3" color="#666" />
 <div className=" d-flex justify-content-center">
-<p > <FaCopyright className="my-auto"/> 2021 <FaHeart className="my-auto"/> Aminoo</p>
+<p className="footer-copyright" > <FaCopyright className="my-auto"/> 2021 <FaHeart className="my-auto"/> Aminoo</p>
 </div>
 
 

@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto',sans-seriff;
     overflow-x: hidden;
     overflow-y: scroll;
+    color: #161616 !important;
 }
 
 ::selection {

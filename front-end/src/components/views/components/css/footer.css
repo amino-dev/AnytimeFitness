@@ -6,7 +6,7 @@
 .footer-description {
     line-height: 1.75rem;
     font-size: 1.1rem;
-    color: #161616;
+    color: #161616 !important;
    }
   
 .footer {
@@ -20,9 +20,9 @@
    }
   
 .footer-link {
-    color: #161616;
+    color: #161616 !important;
    }
   
-.footer-link:hover, .social a:hover {
-    color: #161616;
+.footer-link:hover, .social a:hover, .footer-title, .footer-contact, .footer-copyright {
+    color: #161616 !important;
    }
