@@ -18,7 +18,7 @@ app.use(bp.json());
 const User = require("./routes/userRoute")
 const Contact = require("./routes/contactRoute")
 const Post = require("./routes/postRoute")
-// const Comment = require("./routes/commentRoute")
+const Comment = require("./routes/commentRoute")
 // const Booking = require("./routes/bookingRoute")
 
 
@@ -26,7 +26,7 @@ const Post = require("./routes/postRoute")
 app.use('/anytimeFitness/user',User)
 app.use('/anytimeFitness/contact',Contact)
 app.use('/anytimeFitness/post',Post)
-// app.use('/anytimeFitness/comment',Comment)
+app.use('/anytimeFitness/comment',Comment)
 // app.use('/anytimeFitness/booking',Booking)
 
 // import database

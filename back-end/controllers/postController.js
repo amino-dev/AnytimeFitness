@@ -4,7 +4,7 @@ const { PORT } = require("../config/config");
 const postModel = require('../models/postModel')
 
 module.exports = {
-   //get all post 
+   //get all posts
     getAll: async (req, res) => {
         try {
             const post = await postModel.find();

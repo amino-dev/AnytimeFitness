@@ -71,7 +71,6 @@ const postSchema = new Schema({
     certifications: {
         type : String,
         required: true
-       
     },
     method: {
         type : String,

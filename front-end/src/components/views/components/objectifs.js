@@ -1,0 +1,34 @@
+import './css/objectifs.css'
+
+const cards = [
+    {title : "VOUS EN AVEZ MARRE DES SALLES DE SPORT ?", desc : "Vous êtes inscrit depuis plusieurs années en salle de sport mais vous n’avez jamais atteint vos objectifs ? Vous allez à la salle 1 ou 2 mois, puis manque de résultats vous arrêtez tout ?", logo : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAE10lEQVRoge2Z72tbVRjHv+fk/qBmRQdb1b4sgoJtEW5DQQeydqMtTmhhe6EIayrcJtG8qKAMphL88UJFEYMxuSEkrPOVTesPsFZsQdnetRBYV/oPFGWFMky77jY39/giibu7ObdNtuRmL/J903Ce55z7fHLu8+Scp0BbbbV1mEirA6goEAh0McauMMZeAvCDLMvBaDSqT05OPiFJ0lcARgD8C+AbTdPiAJh1vmsgoVDoWLFYvMIYOwfgL0rp6/F4/FYFwjTNFQDPW6YsyrI8kc/niSRJCwBGLba3NU371ro+bToBgHA4LBuGscgYmwAgAhg2TXM5EAh0AQBjbBz3QwDAmK7rC52dnezg4GACwG8W2zv2Z7gCouv6FIBTtuHeCkwikdAAvM+Z6gTzuN3RFRAAssP4/zCapn2KGmEIIb/YnVwBMQwjBWDdwVw3jK7rM3YH15Ld7/efFEVxGUCfg8smgCFN0/5WVfVdAJ/bHQghS7quj2cymbt2m6ex4Torl8vd6e/vn/N4PKMAnuS4nADwiqIo85qmLSmKcgfAWZvPM4Ig+Pr6+uZyuZxhNbiVIwCAdDq9TSk9A+fX7DkAv5dfsy/Aec0YYyOSJMXs466CAEA8Hr9FKR3Gw+XMefuA6yBAQ2Cu2ye0BAQowRQKhSEANxxcek3T/FNV1afLMO+VxzcFQfDbnVsCEggEulRVDdabM4SQaUrpy7FY7B+7o+uHRmsZZox9lkwmL9VTmp3Wda38AqWdoJSuoBwwIeSUoigklUr96vP5soyxMQBdnKknAIz4fL7s6urqHm9t13akfMJdBtBrtzHG3komk7HDfMpaLxQKQ+l0ettucCVHjghw3ePxzAG1VTNRFK/yDE0HOQqCUjpcuZcANcHYT9EAmgxSL0RFltLMg5nnPatpIA8KUVE6nd7m/M784fV6VZ5/U5L9YSGsCoVCxwzDuAhgt7u7+/tIJGLw/BxBIpGIsLW19Roh5LH9/f2rs7Oz3LLXTIh6xAWZmZnp2Nvb+xnAmfLQjUKhMMwre1a1CgJwyJHd3d0U7kEAQJ8oiit+v/+k00KthAAcQAgh45zhXlEUVyqdD6taDQE4gDDGrjn491rbOMCjAQE4gHg8njdQw10BAIrF4nm0GAJwAKn1rhAKhZ5KJpMxQsglm31TEISzbkEAh5x+a2kWmKZ5bnBwMBuPx5cGBgbuolQgNgVBOM27MzRT3PJbbiiPJxIJrZYTaeUVUlU1SCnNurkTFVWBlC85KygF/qGmaR834uLTbFXliCRJs7j37X+kqurleq6kTYrzSFWBMMZetA19oqrq5Xo6Hw2PsgZVgRBCshy/Rx6mCmRnZ2caQFW3GyWYD+pp4zQy0KNUVX43NjaKPT092Y6OjhcAPGszn1YUxUylUou19nHX1tZ2mxB3lap2JBgMHvd6vVSW5QsAFjlz6ioAU1NTnQ2M11FVIIZhfC1J0kI+nyeyLE+AD1NzzgiC8GYjA3YSL9lfBTD6ADA3HZ6x38B4HcU7a90u/60JZnp6Wi3D8JoF12RZzjQyYCfxQL60fD4K5iYh5EfgvjbOMoACgHlBEMai0ajelMht4p21iKqqIZT+BXycEPKTruszmUzmdjgclnVd/w7ABQDXKKUXW3GuaqutturXf3i5qqwGZBb/AAAAAElFTkSuQmCC"},
+    {title : "VOUS MANQUEZ DE MOTIVATION ?", desc : "Vous manquez réellement de motivation ? Vous abandonnez rapidement et trouvez toutes les excuses du monde pour ne pas faire votre sport ?", logo : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAFBklEQVRoge1aW2gcVRj+/pNNNrFWt2ptu9h6e4nBC26qVaTUF9GiRhQiKgq1Sc4kqxFEqkIfOhUpFvXBLqQzO9oEA4puBbEvCl5ApA+x2YoXfPEOq0KRrpc22Wbm/D40kc1md86Z3YlP+d7OnO////PNf/Zc/llgBStYFlDcDqWUGQCPEdFnruuOx+2/EcQy+HwHwE5mPiSlHFwG/3URa0ay2ey5vu//XfWowsxbPc/7PM449RBrRoIg2FDzKElEh6WUF8UZpx5iFaKUuqnO400AXscy/B6rEasQIrq7Qdd2y7J2xBlrSey4HA0PD1+slPoFQLIBpZxIJK4aGxv7Pa6Y1YgtI0qpp9BYBACk5ubmno8rXi1iycjIyMgVQRB8BeAcDVUJITY7jnM8jrjViCUjQRAcgF4EAAillB1HzFq0nBHLsh5k5jcimLAQ4lrHcb5uNXY1WsrI4ODgOmZ+JaIZBUGwq5W49dCSkLa2tlcBrI1qR0T9UsrzW4ldi0SzhlJKi5nvatK8i4juA7DoUDk6OpqcnZ291ff94vj4+IkoDpvKiJTySgAvN2O7AGZ+oPZZpVJ5l4jeb29v/y6bzW6M4i+yENu2BYDXAKyKaluDW2zb/m9GSCk3Abh9vnme7/vDUZxFFlIqlUYBbItqVwerSqXS9QsNZt6BxavoTillu6mzSEKy2exGItoXxSYMRLQZAAYGBi4gotGa7vXMvN3UVyQhvu/vhdnGZ4oNAJBIJF4AsOSoL4S419SR8YYopbwGwHEAbaY2BnCJ6BtmPtCg/8TJkyc3FAqFQOfIePklon3MHKcIALifmdeE9K9NpVJbABzVOTKaWlLKbma+03R0ERAmAgBARHeYODISwsxDWOYbXghuNiEZCSEi4x/dMmBLf3+/dkprhUgpuwFcHsuQmsPqVCrVrSOZZCTT5ACOAvihSdtFIKLrdBytECK6OmLcgJn3ALgN8/tEq2DmtI6jFcLMF0aJSURDnuc9h7NloK4ItmHQvhATIatNoxHRwap6r/E5SQchxDotR0cgohnDeDOVSmX3QiOZTP4MwDe0DYVSSruzm2TkV8N4701MTJQXGrlc7i8AHxrahoKIyjqOyapVNAy2pMQjhNgDQPs2DfCTjmAytT4GUDEIVqp94DjOFBHtrkeOiC90BK2QfD7/JzMf0fGYuW4xwXXd/QAO6uxDcDqZTMZzaBRC7AfAYRxmvrFRXzqdfhzAIZNYdfBpLpfTzggjIa7rHgMwFsYhor5GJR7btlU6nR5CE2JMi3/GN8SZmZlnAHwfQkkBeKJRZ5WYgmlMAKVyufyWCdFYyOTk5CkhxEMA/gmhPZnNZtc36rRtWyWTyUdgcFECAGZ+sVAonDHhRrqzO44zpZS6B8BsA8qaubm5N8OO3blcrqKUehjhLwQAviSi0OlcjchX12Kx+GMmkzk2/3Wqs7afiC7r6urqmJ6e/ijERzmTyZwOuf1VAPTl8/klS3ojNFVp9Dzvg/lV6tsGlGcty9ob5qOzs9MBUO/rFTPzUD6fN9qIF9B0MaFYLP7R09Mz0dHR0QHghjq+tvX29h6Znp7+rZ791NRU0NvbewmARR9Qmflpz/OcqONpqRo/OTl5ynXdXUKIDM6uRouOI0qp0Hs+Eb1d1TzDzNLzvJeaGUusBYWBgYFLE4lEn1JqM4BPPM+b0NlYlvUoM29l5oP/xx8LVrCCiPgXwA6eIuGUeo0AAAAASUVORK5CYII="},
+    {title : "VOUS NE SAVEZ PAS COMMENT VOUS Y PRENDRE ?", desc : "Avec toute la meilleure volonté du monde vous essayez de vous remettre au sport ? Vous vous sentez seul et vous ne savez pas par où ? quand ? et par quoi commencer ?", logo : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAE4klEQVRoge1ZbWhbVRh+3nvT2ilYsjqlZYqDMXRVcZQJRVE6BC26uv2IOhTt1uQ0TcyP/hmODbw6JwzZ/Ci0zU0KhYAfVOjmnDqmXSkIW6E/toGigk5c4ieKlfUjvfe+/ljSpFluepNz2xXpA/lxznme856H93zdE8IKhqZpSjKZfFpRlHZm3gLACyDFzF8Q0Tu6rl/Mcun6DbM0hBC3APgIwCM2FIuZX43FYgcBsLp8Q3OO7u7uNYZhjABoLkEjImppamoyJyYmxlZkRoQQGoBX8qp+BjBARJeZeSuAPQCqMm2moij3rzgjmqZ5UqnUbwDWZqouAHhY1/V/shwhxEMARpAzE3fdSDAY3GJZ1lMAWgDcAWBdpukSgJMA3tZ1/Rc7fSAQ2EpE49kyET0ajUa/LOQJIaIARKb4o8ctAx0dHRtVVT1qWdZ2G0pj5hcQQrTqun6uGImZLSIaypanpqbOFuMR0TgzZ400uJKRzs7OZmY+AaDOoeQPAK9blvVVPB6fqCRmwTr6U9qI3+9fryjKeeTmdLn4IJ1O7x4cHJxxKggGg3daljWO3LT9WKkw+DyIKIrKTQDAs1VVVW85JQsh6i3LOo2cCTDzUamMBAKBRiK6CPmD1VJVdXNfX9+3pUiZ7J8GcFdedULX9RekMkJEu+DO7UAxTfO5UgQhRK2iKKew0MRYOp0WACC1azHzg0Su7eB2V5EsDgPYnFc+Mz09vT2RSMwAgGxGNsnoC2DbVzgcrsPV0zyLMQBPJhKJK9kK2cXuldQ76ss0zXuRO8WhqupuXden8jmyB6Ihqc9H2q6hv79/FIusRdmM/CCpz8dPMmJZIyOS+nkw8xkZvayRE5L6eTDzMRm97Pa7z63tV1XVvbDJcCgUut0wjEMANgI42dDQcFjTtAXrU8oIETXK6PPBzPfYhTEM4xMA92XKzalUCgAO5ZNkp9YFSf2ifYVCofXImcjiiUKerJGopD4Lzlw+r4Gqqr8DmFxAZv6+kCdlRNf1Y0TUCsCS6MZi5tZoNHq8WGNPT88sM7cjZ+Y8M+8v5LmyUgOBwDkieqASLRGdjUajpV5LAAA+n6+6trb21ng8frlYu1ufukcAfFih9k0npKGhoTSAoiYAFx/ohBCfAXi8HA0zfxqLxa5ZuJVA+gsxi8z3xDdlSL72eDzPuxXf1eegrq4ur2mafznhqqq6tq+v72+3Yrv+riWEYCc8Xdddje3a1LrecNVIe3t7jVNuJBK5wc3Yrhqprq5+2Sl3dnZ2r5uxXZmn4XC4bm5uTgMQLqNPJqJ3DcN4bWBgwNEGUQoVGxFC3MjMrYqi7GTmHQBuqrCrKwCGiWiYmT8v/BZ3irKMRCKRm9Pp9A5m3gngMQBrKglaAlNEdMqyrOGamprjPT09k4tLrsKREb/fv4GIOolIwN2Xk1L4F8D7zHwkFot9txi5pBGfz6d6vd4DAPYj7zlmmZEmooP19fVvaJpme8u2/Q9R0zTFMIz3ALxUircMUAFsm5yc3NTW1jY8Ojpa9MC13X6TyeQBAM8s1ejKBRHtSqVS+2zbi1X6/f7bFEW5BMDxAbdMmPF4PBt6e3t/LWwomhEi2oOVZwIAakzTfLFYg52RbUs7Him0FKu0WyN3L+FApMDMRcdmZ0Tmr7SlxrrFKatYxSr+t/gPAFaRpWdaVmUAAAAASUVORK5CYII="},
+]
+
+function Objectif(props){
+    return(
+        <div className="mb-4">
+            <div className="d-flex mb-2">
+               <img  src={props.logo} alt="objectifs-logo" className="mr-3 objectifs-logo "/>
+               <h5  className="objectifs-title">{props.title}</h5>
+            </div>
+            <p className="mb-5 ml-5 pl-4">{props.desc}</p>  
+        </div> 
+    )
+ }
+ 
+ function Objectifs() {
+    return(
+     <div className="container">
+       <div className="">
+          {cards.map(element =>
+            <div>
+               <Objectif title = {element.title} desc = {element.desc} logo = {element.logo}/>     
+            </div>
+          )}
+       </div>
+     </div>
+    )
+ }
+ export default Objectifs

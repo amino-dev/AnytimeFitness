@@ -13,5 +13,6 @@
 
 .hr {
     max-width: 50px;
+    min-height: 3px;
 }
 
