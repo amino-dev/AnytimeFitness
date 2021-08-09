@@ -5,7 +5,7 @@ import coach2 from '../../../../img/coach-2.png'
 import coach3 from '../../../../img/coach-3.png'
 import ObjectifsCoach  from './objectifsCoach'
 import { Carousel } from 'react-bootstrap'
-import Descs from '../home-page/desc'
+import Descs from '../about-page/desc'
 
 
 function Coachs(){

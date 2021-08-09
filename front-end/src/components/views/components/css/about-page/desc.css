@@ -19,6 +19,11 @@
     }
 }
 
+.desc-logo {
+    width: 30px;
+    height: 30px;
+}
+
 @media only screen and (max-width: 320px) {
     .desc-title {
         font-size: 2.2rem; 

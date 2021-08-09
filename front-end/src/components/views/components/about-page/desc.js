@@ -1,4 +1,4 @@
-import '../css/home-page/desc.css'
+import '../css/about-page/desc.css'
 
 const cards = [
     {title : "DOMICILE", logo : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAC0ElEQVRoge2YT2jTUBzHv7+kIPhnwg6DUpCBCOJlB8tAUGQH8SjiUCZj6ljfC4MIXhx46kEPDnYezVxbb5tjBxFERKfgnMiWIYggeFKYlyHV3ZI2+XmY22rt1qRN1zDzOb73y/t9PzzeS1Ngj0DNXFzTtE7HcXJExI7j3JicnPzarF5NExFC9ACYAtDxZ+gHEfVnMplnzejXDBGSUt5m5nsA1Io5ZubRRCJxJ51Ou4E2DXIxXdfbbNvOM/PFneqY+WksFusfHx8vBNU7MBEpZRczzwI46vGRb8zcOzExsbgxIITgaoWGYdTMqXhsuiNSygFmfgfvEgBwhIheSykHysZuASjWk6GhHdF1fZ9lWaMAbjayDgCjUCjoMzMzthDiNIBHAOKbk83cEU3TEpZlvULjEgAg2tvbFzRN6zQMY75YLHYR0ZyfBeoSSaVSZ13XXQJwqp7nq8HMJ13XXZRSnsvlcqvxePw8M98HUPXcVFJ5PdaCpJQjAB4CaPMb1gP7AVxNJpPW2NjY/PLy8otkMvnZNM1PNYN57TA4OHhIVdUsEfU2FNU7T2zbHsjn8z+9FHsSEUIcBzAL4EQjyergC4BLhmF8rFVY84xIKfsALGH3JQDgGID3qVTqeq3CbXcknU7HVlZW7hLRSKDR6mfziq42WVVE07QO13WnAPQ0NZpPmPmt4ziXs9ns98q5f0SGhobOKIoyjbIXUshYJaK+TCbzsnzwr+tXSimIaBrA4V2N5o8DWL+ibdM0FzYGCQCGh4cPlkqlBwCutCpdPTDzYyK6ZhjGLwUASqXSHNYl1lobzRdrRHSBmZ8DW9dvEcAHVVW7W5fLH6qqdhORqSiKBVQ57Nt9E4SNyl/EgXyPhIFIJGxEImEjEgkbsSAX8/JvRzlBvrP2zI5EImEjEgkbkUjYiETCRiQSNiKRsBGJhI09LTK/6yl8QkRvWp0h4r/hN7H66q48g2dXAAAAAElFTkSuQmCC"},
@@ -10,7 +10,7 @@ const cards = [
 function Desc(props){
     return(
         <div className="text-center mx-3 mb-5">
-            <img  src={props.logo} alt="desc-logo" className="mb-4"/>
+            <img  src={props.logo} alt="desc-logo" className="mb-4 desc-logo"/>
             <h3  className="mb-3 desc-title">{props.title}</h3>
         </div> 
     )
