@@ -15,7 +15,7 @@ function Atout(props){
     return(
         <div className="text-center mx-3 mb-5">
             <img  src={props.logo} alt="atout-logo" className="mb-4"/>
-            <h2  className="mb-3">{props.title}</h2>
+            <h3 className="mb-3 atout-title">{props.title}</h3>
             <hr className="mb-4 d-block mx-auto hr"></hr>
             <p className="mb-4 desc">{props.desc}</p>  
         </div> 

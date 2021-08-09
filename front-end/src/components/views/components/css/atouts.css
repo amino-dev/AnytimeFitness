@@ -1,5 +1,6 @@
 .desc {
     color: #666;
+    font-size: 1.2rem;
 }
   
 .cards {
@@ -15,4 +16,10 @@
     max-width: 50px;
     min-height: 3px;
 }
+
+@media screen and (min-width: 352px) and (max-width: 405px) {
+    .atout-title {
+        font-size: 2.1rem;
+    }
+  }
 
