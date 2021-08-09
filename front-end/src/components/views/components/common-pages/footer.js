@@ -1,5 +1,5 @@
-import './css/footer.css'
-import logo from '../../../img/logo.png'
+import '../css/common-pages/footer.css'
+import logo from '../../../../img/logo.png'
 import { Container, Row, Col} from 'react-bootstrap'
 import { FaMailBulk, FaPhoneAlt, FaClock,FaHeart, FaCopyright, FaFacebookSquare,FaTwitterSquare, FaInstagramSquare} from 'react-icons/fa'
 import { Link } from "react-router-dom"

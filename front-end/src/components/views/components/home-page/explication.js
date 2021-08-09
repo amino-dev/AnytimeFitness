@@ -1,8 +1,8 @@
-import './css/explication.css'
-import search from '../../../img/recherche.png'
-import reservation from '../../../img/reservation.png'
-import confirmation from '../../../img/confirmation.png'
-import seance from '../../../img/seance.png'
+import '../css/home-page/explication.css'
+import search from '../../../../img/recherche.png'
+import reservation from '../../../../img/reservation.png'
+import confirmation from '../../../../img/confirmation.png'
+import seance from '../../../../img/seance.png'
 
 
 import { Container, Row, Col} from 'react-bootstrap'

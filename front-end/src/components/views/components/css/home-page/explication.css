@@ -1,7 +1,7 @@
 
 @media only screen and (min-width: 992px) {
     .explication-section {
-        background-image: url('../../../../img/curves.png');
+        background-image: url('../../../../../img/curves.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top;

@@ -1,5 +1,5 @@
-import "./css/check.css"
-import check from "./../../../img/check.png"
+import "../css/about-page/check.css"
+import check from "../../../../img/check.png"
 function CoachSportif() {
    return(
     <div className="container mt-5 pt-2">

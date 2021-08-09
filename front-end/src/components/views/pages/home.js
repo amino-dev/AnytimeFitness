@@ -1,10 +1,10 @@
-import NavBar from "../components/navbar"
-import Footer from "../components/footer"
-import Atouts from "../components/atouts"
-import About from "../components/about"
-import Offers from "../components/offer"
-import Explication from "../components/explication"
-import Top from "../components/top"
+import NavBar from "../components/common-pages/navbar"
+import Footer from "../components/common-pages/footer"
+import Atouts from "../components/home-page/atouts"
+import About from "../components//home-page/about"
+import Offers from "../components//home-page/offer"
+import Explication from "../components/home-page/explication"
+import Top from "../components/common-pages/top"
 import "./css/home.css"
 
 

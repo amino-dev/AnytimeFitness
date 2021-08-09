@@ -1,6 +1,6 @@
 import { Container , Row , Col } from 'react-bootstrap'
-import './css/objectif.css'
-import coach from '../../../img/coach.png'
+import '../css/about-page/objectif.css'
+import coach from '../../../../img/coach.png'
 import Objectifs from './objectifs'
 
 

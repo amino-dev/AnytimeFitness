@@ -1,9 +1,9 @@
-import logo from '../../../img/logo.png'
+import logo from '../../../../img/logo.png'
 import {Navbar, Nav, Button} from "react-bootstrap"
 import {FaUser} from 'react-icons/fa'
 import { Link } from "react-router-dom"
 import { useState } from 'react'
-import './css/navbar.css'
+import '../css/common-pages/navbar.css'
 
 
 function NavBar(){

@@ -1,7 +1,7 @@
-import './css/offer.css'
+import '../css/home-page/offer.css'
 import { Container, Row, Col } from 'react-bootstrap'
-import solo from '../../../img/solo.png'
-import community from '../../../img/group.png'
+import solo from '../../../../img/solo.png'
+import community from '../../../../img/group.png'
 import Communities from './community'
 
  function Offers() {

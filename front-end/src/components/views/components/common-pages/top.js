@@ -1,9 +1,9 @@
 
-import './css/top.css'
+import '../css/common-pages/top.css'
 import { Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
-import img from '../../../img/top.png'
-import Text from "../components/text"
+import img from '../../../../img/top.png'
+import Text from "./text"
 
 function Top(){
  

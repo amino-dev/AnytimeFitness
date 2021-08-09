@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { init } from 'ityped'
-import "./css/text.css"
+import "../css/common-pages/text.css"
 
 export default class Text extends Component {
   componentDidMount(){

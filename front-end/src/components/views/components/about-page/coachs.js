@@ -1,11 +1,11 @@
 import { Container , Row , Col } from 'react-bootstrap'
-import './css/objectif.css'
-import coach1 from '../../../img/coach-1.png'
-import coach2 from '../../../img/coach-2.png'
-import coach3 from '../../../img/coach-3.png'
+import '../css/about-page/objectif.css'
+import coach1 from '../../../../img/coach-1.png'
+import coach2 from '../../../../img/coach-2.png'
+import coach3 from '../../../../img/coach-3.png'
 import ObjectifsCoach  from './objectifsCoach'
 import { Carousel } from 'react-bootstrap'
-import Descs from './desc'
+import Descs from '../home-page/desc'
 
 
 function Coachs(){
