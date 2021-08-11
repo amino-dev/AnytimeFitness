@@ -30,7 +30,7 @@ function NavBar(){
         <Link className="nav-link my-auto" to="/nos-coachs">Nos coachs</Link>
         <Link className="nav-link my-auto" to="/contact">Contact</Link>
         <Link className="nav-link my-auto" to="/connexion">
-            <Button className="button-sign my-auto" variant="outline-dark" >
+            <Button className="button-sign my-auto" variant="" >
                  <FaUser className="mb-1"/>
             </Button>
         </Link>
