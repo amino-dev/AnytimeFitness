@@ -1,17 +1,18 @@
 import NavBar from "../components/common-pages/navbar"
 import Alert from "../components/common-pages/alert"
-import TopButton from "../components/coach-page/top-button"
+import LoginForm from "../components/connection-page/login-form"
 import Footer from "../components/common-pages/footer"
 
-function Coach(){
+
+function Connection(){
  
     return(
   <div className="">
       <NavBar/>
       <Alert/>
-      <TopButton/>
+      <LoginForm/>
       <Footer/>
     
   </div>
   )}
-  export default Coach
+  export default Connection

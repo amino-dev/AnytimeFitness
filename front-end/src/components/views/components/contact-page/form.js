@@ -1,5 +1,5 @@
 import '../css/contact-page/form.css'
-import { Button, Form } from "react-bootstrap"
+import { Button, Form, InputGroup} from "react-bootstrap"
 import { FaUserAlt, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa"
 import { GrMail } from "react-icons/gr"
 import { SiGooglemessages } from "react-icons/si"
@@ -11,6 +11,21 @@ import { addNewContact } from "../../../../redux/actions/contactActions"
 
 
 function ContactForm(){
+ const [validated, setValidated] = useState(false);
+
+ const handleSubmit = (event) => {
+  const form = event.currentTarget;
+      if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+      }
+        setValidated(true);
+ }
+
+ function changeHeight() {
+       document.getElementById("contact-form").style.height = "950px";
+ }
+
   const [input,setInput]=useState({name :"", lastname :"", city :"", email :"", tel :"", message :""})
   
   const handleChange=(e)=>{
@@ -30,71 +45,108 @@ function ContactForm(){
   }
 
   return(
-  <div className="">
+    <div className="">
        <h2 className="text-center my-5 pt-4">CONTACTEZ-NOUS</h2>
-       <div className="text-center mb-5">
+       <div className="text-center mb-4">
              <p>Une question ? Besoin d'aide ou d'informations ?</p>
              <p>Nous sommes à votre écoute. N'hésitez pas à nous contacter !</p>
              <p>🎁 Si vous souhaitez offrir un bon cadeau, pensez à le préciser afin que nous puissions vous l'envoyer.</p>
        </div>      
-       <Form className="contact-form">
-            <Form.Group className="mb-3">
-                   <div className="d-flex">
-                         <FaUserAlt className="mt-2 mr-2 contact-icons"/>
-                         <Form.Control  className ="contact-input" 
-                          type="text" name="name" 
-                          onChange={handleChange}
-                          placeholder="Ecrivez votre prénom ici.." />
-                   </div>    
-             </Form.Group>
-             <Form.Group className="mb-3">
-                   <div className="d-flex">
-                         <FaUserAlt className="mt-2 mr-2 contact-icons"/>
-                         <Form.Control  className ="contact-input"
-                          type="text" name="lastname" 
-                          onChange={handleChange}
-                          placeholder="Ecrivez votre nom ici.." />
-                   </div>    
-             </Form.Group>
-             <Form.Group className="mb-3">
-                   <div className="d-flex">
-                         <FaMapMarkerAlt className="mt-2 mr-2 contact-icons"/>
-                         <Form.Control  className ="contact-input"
-                          type="text"  name="city" 
-                          onChange={handleChange}
-                          placeholder="Ecrivez votre ville ici.." />
-                   </div>    
-             </Form.Group>
-             <Form.Group className="mb-3">
-                   <div className="d-flex">
-                         <GrMail className="mt-2 mr-2 contact-icons"/>
-                         <Form.Control  className ="contact-input"
-                          type="email" name="email" 
-                          onChange={handleChange}
-                          placeholder="Ecrivez votre email ici.."/>
-                   </div>    
-             </Form.Group>
-             <Form.Group className="mb-3">
-                   <div className="d-flex">
-                         <FaPhoneAlt className="mt-2 mr-2 contact-icons"/>
-                         <Form.Control  className ="contact-input" 
-                          type="number" name="tel" 
-                          onChange={handleChange}
-                          placeholder="Ecrivez votre numéro de téléphone ici.." />
-                   </div>    
-             </Form.Group>
-             <Form.Group className="mb-3">
-                   <div className="d-flex">
-                         <SiGooglemessages className="mt-3 mr-2 contact-icons"/>
-                         <Form.Control   as="textarea"  rows={5}  cols={40} className ="contact-input" 
-                          type="text" name="message"
-                          onChange={handleChange}
-                          placeholder="Ecrivez votre mesage ici.." />
-                   </div>    
-             </Form.Group>
-             <Button  className="my-auto contact-button" variant="outline-dark" onClick = {() => addContact()} >
+      <Form className="form contact-form" noValidate validated={validated} onSubmit={handleSubmit} id="contact-form" >
+            <Form.Group  className="mb-5">
+             <InputGroup >
+              <InputGroup.Prepend>
+                 <InputGroup.Text>
+                   <FaUserAlt className="mr-2"/>
+                 </InputGroup.Text>
+              </InputGroup.Prepend>
+                 <Form.Control  className ="contact-input"
+                      type="text" name="name" 
+                      required
+                      onChange={handleChange}
+                      placeholder="Ecrivez votre prénom ici.." />
+                     <Form.Control.Feedback className="my-2 ml-5">Bien fait!</Form.Control.Feedback>
+                     <Form.Control.Feedback  type="invalid" className="my-2 ml-5">Entrez votre prénom SVP!</Form.Control.Feedback>
+             </InputGroup>
+            </Form.Group>
+            <Form.Group  className="mb-5">
+             <InputGroup >
+              <InputGroup.Prepend>
+                 <InputGroup.Text>
+                   <FaUserAlt className="mr-2"/>
+                 </InputGroup.Text>
+              </InputGroup.Prepend>
+                 <Form.Control  className ="contact-input"
+                      type="text" name="lastname" required
+                      onChange={handleChange}
+                      placeholder="Ecrivez votre nom ici.." />
+                      <Form.Control.Feedback className="my-2 ml-5">Bien fait!</Form.Control.Feedback>
+                      <Form.Control.Feedback  type="invalid" className="my-2 ml-5">Entrez votre nom SVP!</Form.Control.Feedback>
+             </InputGroup>
+            </Form.Group>
+            <Form.Group  className="mb-5">
+             <InputGroup >
+              <InputGroup.Prepend>
+                 <InputGroup.Text>
+                   <FaMapMarkerAlt  className="mr-2"/>
+                 </InputGroup.Text>
+              </InputGroup.Prepend>
+                 <Form.Control  className ="contact-input"
+                     type="text"  name="city" required
+                     onChange={handleChange}
+                     placeholder="Ecrivez votre ville ici.." />
+                     <Form.Control.Feedback className="my-2 ml-5">Bien fait!</Form.Control.Feedback>
+                     <Form.Control.Feedback  type="invalid" className="my-2 ml-5">Entrez votre ville SVP!</Form.Control.Feedback>
+             </InputGroup>
+            </Form.Group>
+            <Form.Group  className="mb-5">
+             <InputGroup >
+              <InputGroup.Prepend>
+                 <InputGroup.Text>
+                   <GrMail  className="mr-2"/>
+                 </InputGroup.Text>
+              </InputGroup.Prepend>
+                 <Form.Control  className ="contact-input"
+                    type="email" name="email" required
+                    onChange={handleChange}
+                    placeholder="Ecrivez votre email ici.."/>
+                    <Form.Control.Feedback className="my-2 ml-5">Bien fait!</Form.Control.Feedback>
+                    <Form.Control.Feedback  type="invalid" className="my-2 ml-5">Entrez votre mail SVP!</Form.Control.Feedback>
+             </InputGroup>
+            </Form.Group>
+            <Form.Group  className="mb-5">
+             <InputGroup >
+              <InputGroup.Prepend>
+                 <InputGroup.Text>
+                 <FaPhoneAlt className="mr-2"/>
+              </InputGroup.Text>
+              </InputGroup.Prepend>
+              <Form.Control  className ="contact-input" 
+                 type="number" name="tel" required
+                 onChange={handleChange}
+                 placeholder="Ecrivez votre numéro ici.." />
+             <Form.Control.Feedback className="my-2 ml-5">Bien fait!</Form.Control.Feedback>
+             <Form.Control.Feedback  type="invalid" className="my-2 ml-5">Entrez votre numéro SVP!</Form.Control.Feedback>
+             </InputGroup>
+            </Form.Group>
+            <Form.Group  className="mb-5">
+             <InputGroup >
+              <InputGroup.Prepend>
+                 <InputGroup.Text>
+                     <SiGooglemessages className="mb-5 mr-2 message-icon"/>
+              </InputGroup.Text>
+              </InputGroup.Prepend>
+              <Form.Control   as="textarea"  rows={5}  cols={40} className ="contact-input" 
+                type="text" name="message" required
+                onChange={handleChange}
+                placeholder="Ecrivez votre mesage ici.." />
+              <Form.Control.Feedback className="my-2 ml-5">Bien fait!</Form.Control.Feedback>
+              <Form.Control.Feedback  type="invalid" className="my-2 ml-5">Entrez votre message SVP!</Form.Control.Feedback>
+             </InputGroup>
+            </Form.Group>
+            <Button  className="my-auto contact-button" type="submit" variant="outline-dark" onClick={ () => {addContact(); changeHeight()}} >
                   <BiSend />
-             </Button>
+            </Button>
       </Form>
     </div>
 )}

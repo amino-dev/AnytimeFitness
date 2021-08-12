@@ -1,17 +1,19 @@
 import NavBar from "../components/common-pages/navbar"
 import Alert from "../components/common-pages/alert"
-import TopButton from "../components/coach-page/top-button"
+import RegisterCoachForm from "../components/register-pages/register-coach"
 import Footer from "../components/common-pages/footer"
 
-function Coach(){
+
+
+function RegisterCoach(){
  
     return(
   <div className="">
       <NavBar/>
       <Alert/>
-      <TopButton/>
+      <RegisterCoachForm/>
       <Footer/>
     
   </div>
   )}
-  export default Coach
+  export default RegisterCoach

@@ -1,6 +1,5 @@
-.contact-form {
+.form {
     width:500px;
-    height:780px;
     background: #f5f5f5;
     border-radius:8px;
     box-shadow:0 0 40px -10px #8d8d8d;
@@ -10,8 +9,8 @@
     box-sizing:border-box;
 }
 
-.contact-icons {
-    font-size: 17px;
+.contact-form {
+    height:730px;
 }
 
 .contact-input{
@@ -91,6 +90,14 @@ button {
     border: none !important;
 }
 
+.input-group-text {
+    background-color: transparent !important;
+    border: 0 !important;
+}
+
+.message-icon {
+    margin-bottom: 100px !important;
+}
 
 
 

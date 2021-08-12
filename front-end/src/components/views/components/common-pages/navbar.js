@@ -26,10 +26,10 @@ function NavBar(){
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="ml-auto">
         <Link className="nav-link my-auto" to="/">Coaching sportif</Link>
-        <Link className="nav-link my-auto" to="/a-propos">A propos</Link>
-        <Link className="nav-link my-auto" to="/nos-coachs">Nos coachs</Link>
-        <Link className="nav-link my-auto" to="/contact">Contact</Link>
-        <Link className="nav-link my-auto" to="/connexion">
+        <Link className="nav-link my-auto" to="/anytimeFitness/a-propos">A propos</Link>
+        <Link className="nav-link my-auto" to="/anytimeFitness/nos-coachs">Nos coachs</Link>
+        <Link className="nav-link my-auto" to="/anytimeFitness/contact">Contact</Link>
+        <Link className="nav-link my-auto" to="/anytimeFitness/connexion">
             <Button className="button-sign my-auto" variant="" >
                  <FaUser className="mb-1"/>
             </Button>
