@@ -15,7 +15,9 @@ app.use(bp.urlencoded({ extended: false }));
 app.use(bp.json());
 
 // Importing routes
-const User = require("./routes/userRoute")
+const User = require("./routes/auth/userRoute")
+const Admin = require("./routes/auth/adminRoute")
+const Coach = require("./routes/auth/coachRoute")
 const Contact = require("./routes/contactRoute")
 const Post = require("./routes/postRoute")
 const Comment = require("./routes/commentRoute")
@@ -24,6 +26,8 @@ const Comment = require("./routes/commentRoute")
 
 // // //Router Middleware
 app.use('/anytimeFitness/user',User)
+app.use('/anytimeFitness/admin',Admin)
+app.use('/anytimeFitness/coach',Coach)
 app.use('/anytimeFitness/contact',Contact)
 app.use('/anytimeFitness/post',Post)
 app.use('/anytimeFitness/comment',Comment)

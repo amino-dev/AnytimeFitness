@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 const postSchema = new Schema({
     userId: {
         type: mongoose.Types.ObjectId,
-      },
+    },
     photo: {
         type : String,
         required: true

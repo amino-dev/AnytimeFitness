@@ -60,7 +60,6 @@ module.exports = {
     //add a post 
     add: async (req, res) => {
         const {
-            photo,
             speciality,
             description,
             soloprice,
@@ -80,8 +79,7 @@ module.exports = {
             method,
             video
         } = req.body;
-
-        // const photo = req.body.photo
+        const photo = '/' + req.file.fieldname +'/'+ req.file.filename;
         const userId = mongoose.Types.ObjectId(req.body.userId)
         try {
           post = new postModel ({
