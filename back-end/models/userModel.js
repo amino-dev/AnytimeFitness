@@ -5,7 +5,6 @@ const UserSchema = new Schema(
   {
     sex: {
       type: String, possibleValues: ['Homme','Femme'],
-      required: true,
       trim: true
     },
     name: {

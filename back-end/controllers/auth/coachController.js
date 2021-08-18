@@ -9,16 +9,17 @@ const jwt = require("jsonwebtoken");
         return res.status(400).json({
           error: "Coach already registered",
         });
-      const { sex,name, lastname, email, password, city, tel} = req.body;
+      const { name, lastname, email, password, city, tel} = req.body;
+      // const cv = '/' + req.file.fieldname +'/'+ req.file.filename;
       const hash_password = await bcrypt.hash(password, 10);
       const _user = new userModel({
-        sex,
         name,
         lastname,
         email,
         hash_password,
         city,
         tel,
+        // cv,
         username: Math.random().toString(),
         role: 'coach'
       });

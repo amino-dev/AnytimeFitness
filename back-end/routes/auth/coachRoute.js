@@ -1,16 +1,18 @@
 const router = require("express").Router();
+const store = require('../../middlewares/multer/multerCV')
 const { signup , signin, requireSignin } = require('../../controllers/auth/coachController')
 // const user = require('../controllers/userController')
 
 //Routes
 
-// Admin sign in
+// Coach signin
 router.post('/signin', signin)
 
-// Admin sign up
+// Coach signup
+// router.post('/signup',store.single('cv'), signup)
 router.post('/signup', signup)
 
-// Admin profile
+// Coach profile
 router.post('/profile', requireSignin, (req, res) => {
     res.status(200).json({ admin : "profile"})
 })

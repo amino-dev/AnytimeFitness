@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const store = require('../middlewares/multer')
+const store = require('../middlewares/multer/multerPhoto')
 const post = require('../controllers/postController')
 
 //Routes

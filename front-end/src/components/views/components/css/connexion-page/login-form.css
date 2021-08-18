@@ -1,16 +1,50 @@
 
 .login-form {
-    height:295px;
+    height:280px;
 }
 
 .inscription-list {
     font-size: 18px;
     line-height: 35px;
-    list-style: square;
+    list-style: none;
     margin-bottom: 30px;
     margin-left: 0.5px;
 }
 
 a {
     color: #161616 !important; 
+}
+
+.input-form {
+    width: 400px !important;
+}
+
+.logo-login {
+    width: 3em !important;
+}
+
+
+@media only screen and (max-width: 520px) {
+    .input-form {
+        width: 350px !important;
+    }
+}
+
+
+@media only screen and (max-width: 470px) {
+    .input-form {
+        width: 300px !important;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .input-form {
+        width: 250px !important;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .input-form {
+        width: 200px !important;
+    }
 }

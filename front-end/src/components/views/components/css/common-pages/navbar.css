@@ -38,8 +38,13 @@ button:hover {
 .button-sign {
     font-size: 1.2rem !important;
     color: #161616 !important;
+    margin-right : -1rem !important;
 }
 
 .navbar.colorChange{
     background-color: #f5f5f5 !important;
-  }
+}
+
+.dropdown-btn:focus,.dropdown-btn.focus {
+    background-color: none !important;
+}

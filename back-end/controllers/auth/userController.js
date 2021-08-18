@@ -205,10 +205,9 @@ const jwt = require("jsonwebtoken");
         return res.status(400).json({
           error: "User already registered",
         });
-      const { sex,name, lastname, email, password, city, tel} = req.body;
+      const { name, lastname, email, password, city, tel} = req.body;
       const hash_password = await bcrypt.hash(password, 10);
       const _user = new userModel({
-        sex,
         name,
         lastname,
         email,
