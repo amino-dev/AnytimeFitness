@@ -77,9 +77,10 @@ module.exports = {
             experience,
             certifications,
             method,
-            video
+            // video,
+            photo
         } = req.body;
-        const photo = '/' + req.file.fieldname +'/'+ req.file.filename;
+        // const photo = '/' + req.file.fieldname +'/'+ req.file.filename;
         const userId = mongoose.Types.ObjectId(req.body.userId)
         try {
           post = new postModel ({
@@ -102,7 +103,7 @@ module.exports = {
             experience,
             certifications,
             method,
-            video
+            // video
         })
           await post.save();
           res.json(post);

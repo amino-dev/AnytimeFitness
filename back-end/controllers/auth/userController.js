@@ -306,7 +306,7 @@ const jwt = require("jsonwebtoken");
       //update a user
       update: async (req,res)=>{
         try {
-          const user = await userModel.findOneAndUpdate(req.params.id,req.body, {new:true})
+          const user = await userModel.findByIdAndUpdate(req.params.id,req.body,{new: true, useFindAndModify: false})
             res.json(user)
         }
         catch (error) {

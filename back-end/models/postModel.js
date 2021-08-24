@@ -6,15 +6,18 @@ const postSchema = new Schema({
     },
     photo: {
         type : String,
-        required: true
+        required: true,
+        max: 5000
     },
     speciality: {
         type : String,
-        required: true
+        required: true,
+        max: 5000
     },
     description: {
         type : String,
-        required: true
+        required: true,
+        max: 5000
     },
     soloprice: {
         type : Number,
@@ -41,40 +44,53 @@ const postSchema = new Schema({
         required: true
     },
     coursetype: {
-        type: Array, possibleValues: ['Individuel', 'En communité'],
-        required: true
+        type : String,
+        // type: Array, possibleValues: ['Individuel', 'En communité'],
+        required: true,
+        max: 5000
     },
     place: {
-        type: Array, possibleValues: ['Chez vous', 'Chez lui', 'En plein air'],
-        required: true
+        type : String,
+        // type: Array, possibleValues: ['Chez vous', 'Chez lui', 'En plein air'],
+        required: true,
+        max: 5000
     },
     courses: {
-        type: Array, possibleValues: ['Remise en forme','Fitness', 'Renforcement musculaire', 'Self-défense'],
-        required: true
+        type : String,
+        // type: Array, possibleValues: ['Remise en forme','Fitness', 'Renforcement musculaire', 'Self-défense'],
+        required: true,
+        max: 5000
     },
     level: {
-        type: Array, possibleValues: ['Enfants','Débutant', 'Intermédiaire'],
-        required: true
+        type : String,
+        // type: Array, possibleValues: ['Enfants','Débutant', 'Intermédiaire'],
+        required: true,
+        max: 5000
     },
     adress: {
         type : String,
-        required: true
+        required: true,
+        max: 5000
     },
     mobility: {
         type : String,
-        required: true  
+        required: true,
+        max: 5000 
     },
     experience: {
         type : String,
-        required: true  
+        required: true,
+        max: 5000
     },
     certifications: {
         type : String,
-        required: true
+        required: true,
+        max: 5000
     },
     method: {
         type : String,
-        required: true
+        required: true,
+        max: 5000
     },
     video: {
         type : String,
