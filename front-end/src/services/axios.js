@@ -13,3 +13,8 @@ export const userLogin = (user) =>
 export const coachLogin = (user) =>
     axios
     .post(`http://localhost:8000/anytimeFitness/coach/signin`,{...user})
+
+
+export const adminLogin = (user) =>
+    axios
+    .post(`http://localhost:8000/anytimeFitness/admin/signin`,{...user})

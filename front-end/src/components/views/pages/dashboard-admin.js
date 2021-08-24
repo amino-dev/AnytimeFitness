@@ -1,12 +1,12 @@
 import Dashboard from "../components/dashboard-coach/dashboard"
 
 
-function DashboardCoach(){
+function DashboardAdmin(){
 
     return(
   <div className="">
-      <Dashboard/>
+      <h1>admin</h1>
     
   </div>
   )}
-  export default DashboardCoach
+  export default DashboardAdmin

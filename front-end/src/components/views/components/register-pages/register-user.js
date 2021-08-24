@@ -262,7 +262,7 @@ const RegisterUserForm = (props) => {
                              <Input  placeholder="Ecrivez votre mot de passe ici.."  type="password" onChange={(e)=>{setPassword(e.target.value)}} />
                            </div>
                            <div className="d-flex justify-content-center">
-                              <Button  className="my-auto top-btn mt-4" type="submit" variant="outline-dark">Se connecter</Button>
+                              <Button  className="my-auto top-btn mt-4" type="submit" variant="outline-dark">S'inscrire</Button>
                            </div>
                        </Form>
                </Row>

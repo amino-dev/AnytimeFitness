@@ -49,7 +49,7 @@ catch (error) {
 //update a contact form
 export const updateContact = (id, name, lastname, city, email, tel, message) => async dispatch => {
     try {
-      const res = await axios.put(`http://localhost:6000/anytimeFitness/contact/update/${id}`,{name, lastname, city, email, tel, message}) 
+      const res = await axios.put(`http://localhost:8000/anytimeFitness/contact/update/${id}`,{name, lastname, city, email, tel, message}) 
        
       dispatch({
         type: UPDATE_CONTACT, 

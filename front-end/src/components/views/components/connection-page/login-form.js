@@ -126,19 +126,13 @@ if(auth.authenticate){
                           <div className="d-flex justify-content-center">
                              <Button  className="my-auto top-btn mt-4" type="submit" variant="outline-dark">Se connecter</Button>
                           </div>
+                          <div className="d-flex justify-content-center mt-5">
+                             <h6 className="mr-5">Pas de compte?</h6>
+                              <Link className="inscri-link" to="/anytimeFitness/inscri-utilisateur"><h6>Créer un compte</h6></Link>
+                          </div>  
                       </Form>
               </Row>
           </Container>
-          <div className="container mt-5 pt-5"> 
-            <h4 className="mb-5 ml-3">Créer un compte ?</h4>
-            <ul>
-                <li className="inscription-list">
-                    Si vous n'avez pas de <b>compte client</b>, vous serez invité à en créer un compte en cliquant  <Link className="inscri-link" to="/anytimeFitness/inscri-utilisateur"><b>ici</b></Link>.
-                </li>
-            </ul>
-
-        </div>
-          
       </div>
   )
 }

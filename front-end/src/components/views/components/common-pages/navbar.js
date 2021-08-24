@@ -10,8 +10,8 @@ import { useState } from 'react'
 import { useSelector, useDispatch } from "react-redux";
 import { signout } from "../../../../redux/actions/userAuthActions"
 import { coachSignout } from "../../../../redux/actions/coachAuthActions"
+import { adminSignout } from "../../../../redux/actions/adminAuthActions"
 import '../css/common-pages/navbar.css'
-
 
 
 function NavBar(){
@@ -45,6 +45,15 @@ function NavBar(){
     window.location.reload(coachLogout())
   }
 
+  const adminAuth = useSelector((state) => state.adminAuth);
+  const adminLogout = () => {
+    dispatch(adminSignout())
+  };
+  
+  const AdminLogout = () =>{
+    window.location.reload(adminLogout())
+  }
+
   const renderLoggedInLinks = () => {
     return (
       <Navbar className={colorChange ? 'navbar colorChange' : 'navbar'} fixed="top" collapseOnSelect expand="lg" bg="light" variant="light">
@@ -56,9 +65,8 @@ function NavBar(){
         <Link className="nav-link my-auto" to="/anytimeFitness/a-propos">A propos</Link>
         <Link className="nav-link my-auto" to="/anytimeFitness/nos-coachs">Nos coachs</Link>
         <Link className="nav-link my-auto" to="/anytimeFitness/contact">Contact</Link>
-        <Link className="nav-link my-auto" to="/anytimeFitness/espace-client">Mon espace</Link>
+        <Link className="nav-link my-auto" to="/anytimeFitness/espace-client">{auth.user.fullName}</Link>
         <Link className="nav-link my-auto" to="/anytimeFitness/connexion">
-        {auth.user.fullName}
             <Button className="button-sign my-auto" variant="" onClick={userLogout} >
                  <FiLogOut className="mb-1"/>
             </Button>
@@ -81,10 +89,32 @@ function NavBar(){
         <Link className="nav-link my-auto" to="/anytimeFitness/a-propos">A propos</Link>
         <Link className="nav-link my-auto" to="/anytimeFitness/nos-coachs">Nos coachs</Link>
         <Link className="nav-link my-auto" to="/anytimeFitness/contact">Contact</Link>
-        <Link className="nav-link my-auto" to="/anytimeFitness/dashboard-coach">Dashboard</Link>
+        <Link className="nav-link my-auto" exact to="/anytimeFitness/dashboard-coach">{coachAuth.user.fullName}</Link>
         <Link className="nav-link my-auto" to="/anytimeFitness/connexion">
-        {coachAuth.user.fullName}
             <Button className="button-sign my-auto" variant="" onClick={CoachLogout} >
+                 <FiLogOut className="mb-1"/>
+            </Button>
+        </Link>
+    </Nav>
+  </Navbar.Collapse>
+ </Navbar>
+    );
+  };
+
+  const adminLoggedInLinks = () => {
+    return (
+      <Navbar className={colorChange ? 'navbar colorChange' : 'navbar'} fixed="top" collapseOnSelect expand="lg" bg="light" variant="light">
+  <Navbar.Brand><img src={logo} className="App-logo" alt="logo" /></Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="ml-auto">
+        <Link className="nav-link my-auto" to="/">Coaching sportif</Link>
+        <Link className="nav-link my-auto" to="/anytimeFitness/a-propos">A propos</Link>
+        <Link className="nav-link my-auto" to="/anytimeFitness/nos-coachs">Nos coachs</Link>
+        <Link className="nav-link my-auto" to="/anytimeFitness/contact">Contact</Link>
+        <Link className="nav-link my-auto" exact to="/anytimeFitness/dashboard-admin">{adminAuth.user.fullName}</Link>
+        <Link className="nav-link my-auto" to="/anytimeFitness/connexion">
+            <Button className="button-sign my-auto" variant="" onClick={AdminLogout} >
                  <FiLogOut className="mb-1"/>
             </Button>
         </Link>
@@ -146,23 +176,37 @@ function NavBar(){
 
         </div>
      
-  </div>
-
-        
+  </div>      
     </Nav>
   </Navbar.Collapse>
  </Navbar>
     );
   };
     
+  const nav = () => {
+    { 
+    if(auth.authenticate){
+    return renderLoggedInLinks()
+  } else if (coachAuth.authenticate){
+    return coachLoggedInLinks()
+  } else if (adminAuth.authenticate){
+    return adminLoggedInLinks()
+  } else {
+    return renderNonLoggedInLinks()
+  } 
+} 
+}
   return(
 <div className="">
-
+{/* 
 {   auth.authenticate ? renderLoggedInLinks()
   : coachAuth.authenticate ? coachLoggedInLinks()
   : renderNonLoggedInLinks()
-}
+} */}
+
+{nav()}
 
 </div>
 )}
 export default NavBar
+

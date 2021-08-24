@@ -3,12 +3,18 @@ import {contactReducer} from "./contactReducers";
 import {userAuthReducer} from "./userAuthReducers"
 import {userRegisterReducer} from "./userRegisterReduers"
 import {coachAuthReducer} from "./coachAuthReducers"
+import {adminAuthReducer} from "./adminAuthReducers"
 import {coachRegisterReducer} from "./coachRegisterReducers";
+import { postReducer,postDetailsReducer} from "./postReducers"
 
 export const rootReducer = combineReducers({
    contactReducer,
    auth: userAuthReducer,
    user : userRegisterReducer,
    coach : coachRegisterReducer,
-   coachAuth: coachAuthReducer
+   coachAuth: coachAuthReducer,
+   adminAuth : adminAuthReducer, 
+   postReducer,
+   postDetails : postDetailsReducer
+
 })

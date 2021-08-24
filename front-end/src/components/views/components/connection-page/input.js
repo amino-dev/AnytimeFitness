@@ -9,6 +9,8 @@ const Input = (props) => {
                placeholder={props.placeholder} 
                value={props.value} 
                onChange={props.onChange} 
+               name={props.name}
+               defaultValue={props.defaultValue}
                className="contact-input input-form" 
                required/>
                <Form.Text className="text-muted" >

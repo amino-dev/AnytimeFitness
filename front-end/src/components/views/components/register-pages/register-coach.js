@@ -216,11 +216,16 @@ const RegisterCoachForm = (props) => {
    const [password, setPassword] = useState("");
    const [city, setCity] = useState('')
    const [tel, setTel] = useState('')
-  //  const [cv, setCv] = useState('')
+   const [cv, setCv] = useState('')
    const [error, setError] = useState('')
    const coachAuth = useSelector((state) => state.coachAuth);
    const coach = useSelector((state) => state.coach);
    const dispatch = useDispatch();
+   
+
+  //  const onFileChange = (e) => {
+  //   setCv(e.target.files[0]);
+  //  }
    
    useEffect(() => {
       if (!coach.loading) {
@@ -230,6 +235,7 @@ const RegisterCoachForm = (props) => {
         setTel("");
         setEmail("");
         setPassword("");
+        // setCv("")
       }
     }, [coach.loading]);
   
@@ -241,7 +247,7 @@ const RegisterCoachForm = (props) => {
         lastname,
         city,
         tel,
-        // cv,
+        cv,
         email,
         password,
       };
@@ -282,7 +288,7 @@ const RegisterCoachForm = (props) => {
                            </div>
                            {/* <div className="d-flex mb-3">
                              <IoMdFitness className="mr-2 mt-2 logo-login"/>
-                             <Input   type="file" onChange={(e)=>{setCv(e.target.value)}}/>
+                             <Input   type="file" onChange={(e) => onFileChange(e)}/>
                            </div> */}
                            <div className="d-flex mb-3">
                              <GrMail  className="mr-2 mt-2 logo-login"/>
@@ -293,7 +299,7 @@ const RegisterCoachForm = (props) => {
                              <Input  placeholder="Ecrivez votre mot de passe ici.."  type="password" onChange={(e)=>{setPassword(e.target.value)}} />
                            </div>
                            <div className="d-flex justify-content-center">
-                              <Button  className="my-auto top-btn mt-4" type="submit" variant="outline-dark">Se connecter</Button>
+                              <Button  className="my-auto top-btn mt-4" type="submit" variant="outline-dark">S'inscrire</Button>
                            </div>
                        </Form>
                </Row>
