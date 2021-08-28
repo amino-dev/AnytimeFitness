@@ -1,96 +1,107 @@
 const mongoose = require ('mongoose')
 const Schema = mongoose.Schema
 const postSchema = new Schema({
-    userId: {
-        type: mongoose.Types.ObjectId,
+    // userId: {
+    //     type: mongoose.Types.ObjectId,
+    // },
+    name: {
+        type : String,
+        // required: true,
+    },
+    lastname: {
+        type : String,
+        // required: true,
     },
     photo: {
         type : String,
-        required: true,
-        max: 5000
+        // required: true,
     },
     speciality: {
         type : String,
-        required: true,
-        max: 5000
+        // required: true,
     },
     description: {
         type : String,
-        required: true,
-        max: 5000
+        // required: true
     },
     soloprice: {
         type : Number,
-        required: true
+        // required: true
     },
     duoprice: {
         type : Number,
-        required: true
+        // required: true
     },
     trioprice: {
         type : Number,
-        required: true
+        // required: true
     },
     quatuorprice: {
         type : Number,
-        required: true
+        // required: true
     },
     transportprice: {
         type : Number,
-        required: true
-    },
-    time: {
-        type : Number,
-        required: true
-    },
-    coursetype: {
-        type : String,
-        // type: Array, possibleValues: ['Individuel', 'En communité'],
-        required: true,
-        max: 5000
+        // required: true
     },
     place: {
         type : String,
         // type: Array, possibleValues: ['Chez vous', 'Chez lui', 'En plein air'],
-        required: true,
-        max: 5000
+        // required: true
     },
     courses: {
         type : String,
         // type: Array, possibleValues: ['Remise en forme','Fitness', 'Renforcement musculaire', 'Self-défense'],
-        required: true,
-        max: 5000
+        // required: true
     },
     level: {
         type : String,
         // type: Array, possibleValues: ['Enfants','Débutant', 'Intermédiaire'],
-        required: true,
-        max: 5000
+        // required: true
     },
     adress: {
         type : String,
-        required: true,
-        max: 5000
+        // required: true
     },
     mobility: {
         type : String,
-        required: true,
-        max: 5000 
+        // required: true
     },
-    experience: {
+    experience1: {
         type : String,
-        required: true,
-        max: 5000
+        // required: true
     },
-    certifications: {
+    experience2: {
         type : String,
-        required: true,
-        max: 5000
+        // required: true
+    },
+    experience3: {
+        type : String,
+        // required: true
+    },
+    experience4: {
+        type : String,
+        // required: true
+    },
+    certification1: {
+        type : String,
+        // required: true
+    },
+    certification2: {
+        type : String,
+        // required: true
+    },
+    certification3: {
+        type : String,
+        // required: true
+    },
+    certification4: {
+        type : String,
+        // required: true
     },
     method: {
         type : String,
-        required: true,
-        max: 5000
+        // required: true
     },
     video: {
         type : String,

@@ -25,9 +25,10 @@ const initialState={
     case ADD_POST:
      return {
       ...state,
-      datas: [...state.datas, payload]
+      datas: [...state.datas, payload ]
 
      };
+ 
      case DELETE_POST:
       return {
         ...state,
@@ -48,18 +49,50 @@ const initialState={
 };
 
 
-export const postDetailsReducer = (
-  state = { post: { reviews: [] } },
-  action
-) => {
-  switch (action.type) {
-    case "POST_DETAILS_REQUEST":
-      return { ...state, loading: true }
-    case "POST_DETAILS_SUCCESS":
-      return { loading: false, post: action.payload }
-    case "POST_DETAILS_FAIL":
-      return { loading: false, error: action.payload }
-    default:
-      return state
-  }
-}
+// export const postDetailsReducer = (
+//   state = { post: { reviews: [] } },
+//   action
+// ) => {
+//   switch (action.type) {
+//     case "POST_DETAILS_REQUEST":
+//       return { ...state, loading: true }
+//     case "POST_DETAILS_SUCCESS":
+//       return { loading: false, post: action.payload }
+//     case "POST_DETAILS_FAIL":
+//       return { loading: false, error: action.payload }
+//     default:
+//       return state
+//   }
+// }
+
+
+// const initState = {
+//   productDetails: {}
+// };
+
+// export  const productDetailsReducer =  (state = initState, action) => {
+//   switch (action.type) {
+//     case "GET_PRODUCT_DETAILS_BY_ID_REQUEST":
+//       state = {
+//         ...state,
+//         loading: true,
+//       };
+//       break;
+//     case "GET_PRODUCT_DETAILS_BY_ID_SUCCESS":
+//       state = {
+//         ...state,
+//         loading: false,
+//         productDetails: action.payload.productDetails,
+//       };
+//       break;
+//     case "GET_PRODUCT_DETAILS_BY_ID_FAILURE":
+//       state = {
+//         ...state,
+//         loading: false,
+//         error: action.payload.error,
+//       };
+//       break;
+//   }
+
+//   return state;
+// };

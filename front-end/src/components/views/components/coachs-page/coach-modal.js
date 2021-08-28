@@ -1,5 +1,5 @@
 import React, {useEffect,useState} from 'react'
-import {Button,Container,Modal,Row,Col,Collapse} from 'react-bootstrap'
+import {Button,Container,Modal,Row,Col} from 'react-bootstrap'
 import {FaEye} from 'react-icons/fa'
 import {useDispatch, useSelector } from 'react-redux'
 import {getAllposts} from "../../../../redux/actions/postActions"
@@ -9,7 +9,7 @@ import "../css/coachs-page/coachs.css"
 import { useHistory } from "react-router-dom";
 
 
-export default function CoachsPosts() {
+export default function CoachsModal() {
 
  
      const post = useSelector(state => state.postReducer.datas)
@@ -20,33 +20,14 @@ export default function CoachsPosts() {
          }, [dispatch])
       console.log("my data",post)
 
-     
-
-  //     let history = useHistory();
-
-  //  const handleClick = () => {
-  //   history.push("/anytimeFitness/coach/:id");
-  // }
     const [show, setShow] = useState(false);
 
-    const [open, setOpen] = useState(false);
     return (
       <div>
-          <div className="coachs-card container">
+          <div className="">
              {post.map((coach,key ) => (
-                  <div className="coach-card mb-5" key={key}>
-                  <div className="position-relative">
-                    <div>
-                     <figure className="hover-img">
-                      <img className="card-img" variant="top" src={coach.photo} />
-                      <figcaption>
-                        <div className="">
-                        <h5 className="text-center mb-4">{coach.name} {coach.lastname}</h5>
-                        <h5 className="text-center  mb-4">{coach.speciality}</h5>
-                        <p className="mb-4">solo : {coach.soloprice} DT |  duo :   {coach.duoprice}  DT  |  trio :  {coach.trioprice} DT  |  quatuor :   {coach.quatuorprice} DT</p>
-                        <p className="mb-4">Frais de déplacement : {coach.transportprice} DT</p> 
-                        
-                         {/* <div className="d-flex justify-content-center mb-2">
+                  <div className="" key={key}>
+                         <div className="d-flex justify-content-center mb-2">
                            <Button variant=""><FaEye className="icons" onClick={() => setShow(true)}/></Button> 
                            <Modal
                            show={show}
@@ -132,60 +113,8 @@ export default function CoachsPosts() {
                               </Container>
                             </Modal.Body>
                           </Modal>
-                         </div>  */}
-                        </div>
-                      </figcaption>
-                      </figure>
-                      <div className="ml-4">
-                      <p>Description : {coach.description}</p>
-                      <p>Cours proposés : {coach.courses}</p>
-                      <p>Niveaux : {coach.level}</p> 
-                      <p>Adresse : {coach.adress}</p>
-                      <p>Mobilité : {coach.mobility}</p>
-                      <p>Expéreinces de coach : </p>
-                      <ul>
-                          <li className="mb-4 coach-infos">{coach.experience1}</li>
-                          <li className="mb-4 coach-infos">{coach.experience2}</li>
-                          <li className="mb-4 coach-infos">{coach.experience3}</li>
-                          <li className="pb-4 coach-infos">{coach.experience4}</li>
-                      </ul>
-                      <p>Certifications : </p>
-                      <ul>
-                          <li className="mb-4 coach-infos">{coach.certification1}</li>
-                          <li className="mb-4 coach-infos">{coach.certification2}</li>
-                          <li className="mb-4 coach-infos">{coach.certification3}</li>
-                          <li className="pb-1 coach-infos">{coach.certification4}</li>
-                      </ul>
-                      <p>Méthodologie : {coach.method}</p>
-
-                      </div>
-                      
-                      {/* <Button
-        onClick={() => setOpen(!open)}
-        aria-controls=""
-        aria-expanded={open}
-      
-      >
-        click
-      </Button>
-      <Collapse in={open}>
-        <div id="">
-         {coach.speciality}
-        </div>
-      </Collapse> */}
-    
-                    </div>
+                         </div> 
                   </div>
-                
-                 </div>
-                  // <div className="mb-5" key={key}>
-                  //   <Card style={{ width: '18rem' }}>
-                  //     <Card.Img variant="top" className="pt-3" src={coach.photo}/>
-                  //     <Card.Body>
-                  //       <Card.Title>{coach.speciality}</Card.Title>
-                  //     </Card.Body>
-                  //   </Card>           
-                  // </div>
                 ))
               }
             </div>

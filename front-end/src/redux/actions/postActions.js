@@ -4,47 +4,57 @@ import axios from 'axios'
 
 //add a post form
 export const addNewPost= (  
-    userId,
-    photo,
-    speciality,
-    description,
-    soloprice,
-    duoprice,
-    trioprice,
-    quatuorprice,
-    transportprice,
-    time,
-    coursetype,
-    place,
-    courses,
-    level,
-    adress,
-    mobility,
-    experience,
-    certifications,
-    method
+  name,
+  lastname,
+  photo,
+  speciality,
+  description,
+  soloprice,
+  duoprice,
+  trioprice,
+  quatuorprice,
+  transportprice,
+  place,
+  courses,
+  level,
+  adress,
+  mobility,
+  experience1,
+  experience2,
+  experience3,
+  experience4,
+  certification1,
+  certification2,
+  certification3,
+  certification4,
+  method
     ) => async (dispatch) =>{
     try{
         const res=await addPost (
-            userId,
-            photo,
-            speciality,
-            description,
-            soloprice,
-            duoprice,
-            trioprice,
-            quatuorprice,
-            transportprice,
-            time,
-            coursetype,
-            place,
-            courses,
-            level,
-            adress,
-            mobility,
-            experience,
-            certifications,
-            method
+          name,
+          lastname,
+          photo,
+          speciality,
+          description,
+          soloprice,
+          duoprice,
+          trioprice,
+          quatuorprice,
+          transportprice,
+          place,
+          courses,
+          level,
+          adress,
+          mobility,
+          experience1,
+          experience2,
+          experience3,
+          experience4,
+          certification1,
+          certification2,
+          certification3,
+          certification4,
+          method
         );
         dispatch ({
             type:ADD_POST,
@@ -103,6 +113,8 @@ export const getOnePost = (id)=> async (dispatch) => {
 //update a post 
 export const updatePost = (
     id,
+    name,
+    lastname,
     photo,
     speciality,
     description,
@@ -123,6 +135,8 @@ export const updatePost = (
     method) => async dispatch => {
     try {
       const res = await axios.put(`http://localhost:8000/anytimeFitness/post/update/${id}`,{photo,
+      name,
+      lastname,
       speciality,
       description,
       soloprice,
@@ -151,23 +165,47 @@ export const updatePost = (
     }
   };
 
-  export const listPostDetails = (id) => async (dispatch) => {
-    try {
-      dispatch({ type: "POST_DETAILS_REQUEST" })
+//   export const listPostDetails = (id) => async (dispatch) => {
+//     try {
+//       dispatch({ type: "POST_DETAILS_REQUEST" })
   
-      const { data } = await axios.get(`http://localhost:8000/anytimeFitness/post/get/${id}`)
+//       const { data } = await axios.get(`http://localhost:8000/anytimeFitness/post/get/${id}`)
   
-      dispatch({
-        type: "POST_DETAILS_SUCCESS",
-        payload: data,
-      })
-    } catch (error) {
-      dispatch({
-        type: "POST_DETAILS_FAIL",
-        payload:
-          error.response && error.response.data.message
-            ? error.response.data.message
-            : error.message,
-      })
-    }
-  }
+//       dispatch({
+//         type: "POST_DETAILS_SUCCESS",
+//         payload: data,
+//       })
+//     } catch (error) {
+//       dispatch({
+//         type: "POST_DETAILS_FAIL",
+//         payload:
+//           error.response && error.response.data.message
+//             ? error.response.data.message
+//             : error.message,
+//       })
+//     }
+//   }
+
+//   export const getProductDetailsById = (payload) => {
+//     return async dispatch => {
+//         dispatch({ type: "GET_PRODUCT_DETAILS_BY_ID_REQUEST" });
+//         let res;
+//         try {
+//             const { productId } = payload.params;
+//             res = await axios.get(`/http://localhost:8000/anytimeFitness/post/get/${productId}`);
+//             console.log(res);
+//             dispatch({
+//                 type: "GET_PRODUCT_DETAILS_BY_ID_SUCCESS",
+//                 payload: { productDetails: res.data.product }
+//             });
+
+//         } catch(error) {
+//             console.log(error);
+//             dispatch({
+//                 type: "GET_PRODUCT_DETAILS_BY_ID_FAILURE",
+//                 payload: { error: res.data.error }
+//             });
+//         }
+
+//     }
+// }

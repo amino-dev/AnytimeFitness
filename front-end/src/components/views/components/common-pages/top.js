@@ -17,7 +17,7 @@ function Top(){
             <h1><Text/></h1>
             <h2 className="text-center top-text">Réservez en quelques clics une séance de sport avec un coach certifié</h2>
             <div className="d-flex justify-content-center">
-              <Link className="nav-link my-auto" to="/nos-coachs">
+              <Link className="nav-link my-auto" to="/anytimeFitness/nos-coachs">
                  <Button className="p-4 primary-btn">Voir tous <br></br>nos coachs</Button> 
               </Link>
             </div>

@@ -29,9 +29,9 @@ Pour des questions spécifiques ou personnelles nos vous invitons à nous poser 
  <Col lg={2} xs={12} sm={12}>
    <h5 className="pt-4 footer-title"><b>Navigation</b></h5>
     <Link className="nav-link my-auto" to="/">Coaching sportif</Link>
-    <Link className="nav-link my-auto" to="/a-propos">A propos</Link>
-    <Link className="nav-link my-auto" to="/nos-coachs">Nos coachs</Link>
-    <Link className="nav-link my-auto" to="/contact">Contact</Link>
+    <Link className="nav-link my-auto" to="/anytimeFitness/a-propos">A propos</Link>
+    <Link className="nav-link my-auto" to="/anytimeFitness/nos-coachs">Nos coachs</Link>
+    <Link className="nav-link my-auto" to="/anytimeFitness/contact">Contact</Link>
  </Col>
  <Col lg={2} xs={12} sm={12}>
 

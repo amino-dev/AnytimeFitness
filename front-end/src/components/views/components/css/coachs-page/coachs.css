@@ -12,15 +12,16 @@
     font-family: 'Source Sans Pro', Arial, sans-serif;
     position: relative;
     overflow: hidden;
-    margin: 10px;
-    min-width: 230px;
-    max-width: 315px;
-    max-height: 350px;
+    margin: 15px;
     width: 100%;
     color: #ffffff;
     text-align: center;
     font-size: 16px;
-    border-radius: 20px;
+    -webkit-border-radius: 50% 50% 50% 50%;
+    -moz-border-radius: 50% 50% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
+    width:350px;
+    height:350px;
   }
   
   .hover-img * {
@@ -141,3 +142,29 @@
     opacity: 1;
   }
 
+ .modal-img {
+  -webkit-border-radius: 50% 50% 50% 50%;
+  -moz-border-radius: 50% 50% 50% 50%;
+  border-radius: 50% 50% 50% 50%;
+  width: 350px;;
+  height:350px;
+ }
+
+ .sidebar, .info-coach {
+   background-color: #ffffff;
+   border-radius: 5px;
+ }
+
+ .sidebar {
+   height: 900px !important;
+ }
+
+ .coach-info {
+   color: #666;
+   line-height: 20px !important;
+ }
+
+ .coach-infos {
+  color: #666;
+  list-style: square;
+ }

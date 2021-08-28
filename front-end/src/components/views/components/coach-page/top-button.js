@@ -67,7 +67,7 @@ function TopButton() {
             <p>Prêt(e) à réserver ?</p>
          </div>
          <div className ="d-flex justify-content-center mb-2">
-           <Link className="my-auto" to="/nos-coachs">
+           <Link className="my-auto" to="/anytimeFitness/nos-coachs">
              <Button variant="primary" className="top-btn">
              Voir tous nos coachs sportifs
              </Button>
