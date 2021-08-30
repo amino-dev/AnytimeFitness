@@ -13,6 +13,10 @@ const contactSchema = new Schema({
         type : String,
         required: true
     },
+    date:{
+        type: Date, 
+        default: Date.now
+    },
     email: {
         type : String,
         required: true

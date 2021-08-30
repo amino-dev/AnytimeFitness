@@ -4,7 +4,7 @@ const initialState={
   loading:true
 } 
 
- export const postReducer = ( state = initialState, action) => {
+export const postReducer = ( state = initialState, action) => {
   const { type, payload } = action;
   switch (type){
     case GET_POSTS:

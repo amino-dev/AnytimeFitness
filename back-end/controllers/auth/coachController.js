@@ -74,7 +74,33 @@ const jwt = require("jsonwebtoken");
   }
 
   module.exports = {
-     signup,
-     signin,
-     requireSignin
-    };
+    signup,
+    signin,
+    requireSignin,
+    
+     //get all users
+     getAll: async (req, res) => {
+       try {
+         const userModel = await coach.find();
+         res.json(userModel);
+       }
+       catch (error) {
+          console.error(error.message);
+          res.status(500).send("server error");
+           }
+       },
+       //delete a coach
+       delete: async (req,res)=>{
+        try {
+          const user = await userModel.findByIdAndDelete(req.params.id)
+          res.json(user)
+        }
+        catch (error) {
+         console.error(error.message);
+         res.status(500).send("server error")
+       }
+    },
+     
+   };
+
+  

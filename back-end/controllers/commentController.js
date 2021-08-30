@@ -43,15 +43,14 @@ module.exports = {
     },
     //add a comment 
     add: async (req, res) => {
-        const { course , date , commentaire} = req.body;
+        const { fullName, course , commentaire} = req.body;
 
         // const photo = req.body.photo
-        const userId = mongoose.Types.ObjectId(req.body.userId)
+        // const userId = mongoose.Types.ObjectId(req.body.userId)
         try {
           comment = new commentModel ({
-            userId,
+            fullName,
             course ,
-            date , 
             commentaire
         })
           await comment.save();

@@ -1,16 +1,20 @@
 const mongoose = require ('mongoose')
 const Schema = mongoose.Schema
 const commentSchema = new Schema({
-    userId: {
-        type: mongoose.Types.ObjectId,
+    // userId: {
+    //     type: mongoose.Types.ObjectId,
+    // },
+    fullName: {
+        type: String,
+        required: true
     },
     course: {
-        type: Array, possibleValues: ['Remise en forme','Fitness', 'Renforcement musculaire', 'Self-défense'],
+        type: String,
         required: true
     },
-    date: {
-        type : Date,
-        required: true
+    date:{
+        type: Date, 
+        default: Date.now
     },
     commentaire: {
         type : String,

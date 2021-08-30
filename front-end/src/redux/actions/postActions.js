@@ -2,7 +2,7 @@ import {addPost,getPosts,delPost,getPost}   from "../../services/api"
 import { GET_POSTS,GET_POST, ADD_POST, DELETE_POST, UPDATE_POST } from "../../shared/apiUrls";
 import axios from 'axios'
 
-//add a post form
+//add a post
 export const addNewPost= (  
   name,
   lastname,

@@ -168,3 +168,11 @@
   color: #666;
   list-style: square;
  }
+
+ .coach-img {
+  -webkit-border-radius: 50% 50% 50% 50%;
+  -moz-border-radius: 50% 50% 50% 50%;
+  border-radius: 50% 50% 50% 50%;
+  width: 250px;;
+  height:250px;
+ }

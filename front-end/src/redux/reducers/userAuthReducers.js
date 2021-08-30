@@ -1,3 +1,4 @@
+
 const inisialState ={
     token:null,
     user:{
@@ -33,8 +34,7 @@ const inisialState ={
                     state={
                         ...inisialState
                     }
-                    break
-                    
+                    break      
            default:
         
         }

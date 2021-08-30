@@ -81,11 +81,10 @@ const Api = axios.create({ baseURL: `http://localhost:${PORT}/anytimeFitness` })
   return Api.get("/post/getAll");
  }
 
- //get a post
- function getPost(id){
+  //get a post
+  function getPost(id){
   return Api.get(`/post/get/${id}`);
  }
-
 
   //delete a post
   function delPost(id){
@@ -95,7 +94,47 @@ const Api = axios.create({ baseURL: `http://localhost:${PORT}/anytimeFitness` })
   //update a post
   function updatePost(id) {
   return Api.put(`/post/update/${id}`);
+ } 
+
+ //get all users
+ function getUsers(){
+ return Api.get("/user/getAll");
  }
 
-  export {addContact,getContacts,delContact,updateContact,addPost,getPosts,getPost,delPost,updatePost}
-  export default {addContact,getContacts,delContact,updateContact,addPost,getPosts,getPost,delPost,updatePost}
+ //delete a user
+ function delUser(id){
+  return Api.delete(`/user/delete/${id}`);
+ }
+
+
+ //get all coachs
+ function getCoachs(){
+  return Api.get("/coach/getAll");
+ }
+
+
+ //delete a coach
+ function delCoach(id){
+  return Api.delete(`/coach/delete/${id}`);
+ }
+
+
+ //add a comment
+ function addComment(fullName, course, commentaire) {
+  return Api.post("/comment/add", {fullName, course, commentaire})
+}
+
+//get all comments
+function getComments(){
+  return Api.get("/comment/getAll");
+}
+
+//delete a contact form
+function delComment(id){
+  return Api.delete(`/comment/delete/${id}`);
+}
+
+
+
+  export {addContact,getContacts,delContact,updateContact,addPost,getPosts,getPost,delPost,updatePost,getUsers,getCoachs,addComment,getComments,delComment,delUser,delCoach}
+  export default {addContact,getContacts,delContact,updateContact,addPost,getPosts,getPost,delPost,updatePost,getUsers,getCoachs,addComment,getComments,delComment,delUser,delCoach}

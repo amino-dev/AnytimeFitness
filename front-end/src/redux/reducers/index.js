@@ -1,12 +1,15 @@
-import { combineReducers} from "redux";
+import {combineReducers} from "redux";
 import {contactReducer} from "./contactReducers";
 import {userAuthReducer} from "./userAuthReducers"
 import {userRegisterReducer} from "./userRegisterReduers"
 import {coachAuthReducer} from "./coachAuthReducers"
 import {adminAuthReducer} from "./adminAuthReducers"
 import {coachRegisterReducer} from "./coachRegisterReducers";
-// import { postReducer,postDetailsReducer,productDetailsReducer} from "./postReducers"3
-import { postReducer} from "./postReducers"
+import {postReducer} from "./postReducers"
+import {UsersReducer} from "./users-reducers"
+import {CoachsReducer} from "./coachs-reducers"
+import {commentReducer} from "./commentRducers"
+
 
 export const rootReducer = combineReducers({
    contactReducer,
@@ -16,6 +19,11 @@ export const rootReducer = combineReducers({
    coachAuth: coachAuthReducer,
    adminAuth : adminAuthReducer, 
    postReducer,
+   UsersReducer,
+   CoachsReducer,
+   commentReducer,
+   contactReducer
+
    // postDetails : postDetailsReducer,
    // product : productDetailsReducer
 
