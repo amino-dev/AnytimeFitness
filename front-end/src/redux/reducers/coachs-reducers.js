@@ -1,4 +1,4 @@
-import { DELETE_COACH, GET_COACHS} from "../../shared/apiUrls";
+import { DELETE_COACH, GET_COACHS, UPDATE_COACH} from "../../shared/apiUrls";
 const initialState={
   datas : [],
   loading:true
@@ -22,6 +22,13 @@ export const CoachsReducer = ( state = initialState, action) => {
           ),
           loading: false
       };
+    case UPDATE_COACH:
+        return {
+          ...state,
+          datas: state.datas.map(data =>
+            data._id === payload._id ? payload : data
+          )
+        };
   }
   return state
 };

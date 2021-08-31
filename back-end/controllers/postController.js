@@ -136,7 +136,7 @@ module.exports = {
     //update a post 
     update: async (req,res)=>{
         try {
-          const post = await postModel.findByIdAndUpdate(req.params.id,req.body, {new:true})
+          const post = await postModel.findByIdAndUpdate(req.params.id,req.body, {new:true, useFindAndModify: false})
             res.json(post)
         }
         catch (error) {

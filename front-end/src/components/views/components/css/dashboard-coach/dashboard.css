@@ -58,12 +58,14 @@
  
  .edit-icon {
    margin-top: -3rem;
+   font-size: 17px !important;
  }
  
  .btn-icon {
   color: #161616 !important; 
   background-color: transparent !important; 
   border-color:  transparent !important; 
+  font-size: 20px;
 }
 
  table {

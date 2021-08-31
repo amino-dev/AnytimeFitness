@@ -1,4 +1,4 @@
-import { DELETE_USER, GET_USERS} from "../../shared/apiUrls";
+import { DELETE_USER, GET_USERS, UPDATE_USER} from "../../shared/apiUrls";
 const initialState={
   datas : [],
   loading:true
@@ -22,6 +22,13 @@ export const UsersReducer = ( state = initialState, action) => {
           ),
           loading: false
       };
+    case UPDATE_USER:
+        return {
+          ...state,
+          datas: state.datas.map(data =>
+            data._id === payload._id ? payload : data
+          )
+        };
   }
   return state
 };

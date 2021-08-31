@@ -23,7 +23,7 @@ const UserSchema = new Schema(
       trim: true
     },
     tel: {
-      type: Number,
+      type: String,
       required: true,
       trim: true
     },

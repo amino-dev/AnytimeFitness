@@ -20,6 +20,8 @@ router.post('/profile', requireSignin, (req, res) => {
 // Get all coachs
 router.get('/getAll',coach.getAll)
 
+// Update a coach
+router.put('/update/:id',coach.update)
 
 // Delete a coach
 router.delete('/delete/:id',coach.delete)

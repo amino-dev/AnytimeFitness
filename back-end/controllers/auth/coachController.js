@@ -100,6 +100,17 @@ const jwt = require("jsonwebtoken");
          res.status(500).send("server error")
        }
     },
+     //update a coach
+     update: async (req,res)=>{
+      try {
+        const user = await userModel.findByIdAndUpdate(req.params.id,req.body,{new: true, useFindAndModify: false})
+          res.json(user)
+      }
+      catch (error) {
+        console.error(error.message);
+        res.status(500).send("server error")
+      }
+    }
      
    };
 

@@ -1,267 +1,238 @@
-import {Modal, Button, Form} from 'react-bootstrap'
-import {useState, useEffect} from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import {addNewPost} from "../../../../redux/actions/postActions"
-import {FaHome} from 'react-icons/fa'
-import { Link } from 'react-router-dom';
+import React from 'react'
+import {Form,Button,Modal} from "react-bootstrap"
+import {useState} from 'react';
+import {updatePost} from "../../../../redux/actions/postActions"
+import {useDispatch} from 'react-redux'
+import {FaPencilAlt} from 'react-icons/fa'
 
-
-const AddPost= () => {
-    
-const [input,setInput]=useState({
-            name: "",
-            lastname:"",
-            photo:"",
-            speciality:"",
-            description:"",
-            soloprice:"",
-            duoprice:"",
-            trioprice:"",
-            quatuorprice:"",
-            transportprice:"",
-            place:"",
-            courses:"",
-            level:"",
-            adress:"",
-            mobility:"",
-            experience1:"",
-            experience2:"",
-            experience3:"",
-            experience4:"",
-            certification1:"",
-            certification2:"",
-            certification3:"",
-            certification4:"",
-            method:""})
-  
-const handleChange=(e)=>{
-    const {name,value}=e.target
-    setInput({
-        ...input,
-        [name]:value
-    })
-    console.log("input",input)
-}
-
-const addPost=()=>{
-  dispatch (addNewPost( input.name,input.lastname,input.photo,input.speciality ,input.description, input.soloprice, input.duoprice,
-    input.trioprice, input.quatuorprice, input.transportprice,input.place,input.courses,input.level,
-    input.adress,input.mobility,input.experience1,input.certification1,input.experience2,input.certification2,input.experience3,input.certification3,input.experience4,input.certification4,input.method)) 
-  console.log("inpuuuuuuuuuuuut",input)
-  setShow(false)
-  }
-  const dispatch = useDispatch()
-
-  const hideButton=() =>{
-     var x = document.getElementById("postButton");
-     if (x.style.display === "none") {
-       x.style.display = "block";
-     } else {
-       x.style.display = "none";
-     }
-   }
-
+const UpdatePost = ({el,id}) => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    return (
-      <div className="mt-4">
-        <Link to="/" className="ml-3 btn-icon"><FaHome className="dash-icon my-4"/></Link> 
-        <div className="ml-3 mt-3">
-            <Button  variant="primary" className="top-btn" id="postButton" onClick={handleShow}>
-              Publier
-            </Button> 
-          <Modal
+    const dispatch = useDispatch()
+    const [update,setUpdate]=useState({photo:el.photo,speciality:el.speciality,description:el.description,soloprice:el.soloprice,duoprice:el.duoprice,trioprice:el.trioprice,quatuorprice:el.quatuorprice,transportprice:el.transportprice,place:el.place,
+    courses:el.courses,level:el.level,adress:el.adress,mobility:el.mobility,experience1:el.experience1,experience2:el.experience2,experience3:el.experience3,experience4:el.experience4,
+    certification1:el.certification1,certification2:el.certification2,certification3:el.certification3,certification4:el.certification4,method:el.method})
+    // handelInput
+    const handleChange=(e)=>{
+        const {name,value}=e.target
+        setUpdate({
+            ...update,
+            [name]:value
+        })
+        console.log("input",update)
+    }
+    // update Product
+
+    const Updatepost=()=>{
+        dispatch (updatePost(id, 
+            update.photo,
+            update.speciality,
+            update.description,
+            update.soloprice,
+            update.duoprice,
+            update.trioprice,
+            update.quatuorprice,
+            update.transportprice,
+            update.place,
+            update.courses,
+            update.level,
+            update.adress,
+            update.mobility,
+            update.experience1,
+            update.experience2,
+            update.experience3,
+            update.experience4,
+            update.certification1,
+            update.certification2,
+            update.certification3,
+            update.certification4,
+            update.method)) 
+        console.log("update",update)
+        setShow(false)
+        }
+
+
+  return(
+    <div>
+    <div className='container mt-1'>
+    <Button className="btn-icon" ><FaPencilAlt className="btn-icon" onClick={handleShow} /></Button>
+
+<Modal
             show={show}
             onHide={handleClose}
             backdrop="static"
             keyboard={false}
           >
             <Modal.Header closeButton>
-              <Modal.Title>Ajouter une publication</Modal.Title>
+              <Modal.Title>Modifier une publication</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <Form>
-              <Form.Group className="mb-3">
-                     <Form.Control type="string" name="name"
-                     onChange={handleChange}
-                     className ="contact-input"
-                     placeholder="SVP entrez votre prénom ...!" 
-                     />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                     <Form.Control type="string" name="lastname"
-                     onChange={handleChange}
-                     className ="contact-input"
-                     placeholder="SVP entrez votre nom de famille ...!" 
-                     />
-                </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="url" name="photo"
+                      defaultValue={el.photo} 
                      onChange={handleChange}
                      className ="contact-input"
-                     placeholder="SVP entrez le lien de votre photo ici ...!" 
                      />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="text" name="speciality"
+                     defaultValue={el.speciality}
                      onChange={handleChange}
                      className ="contact-input"
-                     placeholder="SVP entrez votre spécialité ici ...!" 
                       />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control  as="textarea" rows={5}  cols={40} type="text" name="description" 
                      onChange={handleChange}
+                     defaultValue={el.description}
                      className ="contact-input"
-                     placeholder="SVP entrez votre description ici ...!" 
                      />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="number" name="soloprice" 
                      onChange={handleChange}
+                     defaultValue={el.soloprice}
                      className ="contact-input"
-                     placeholder="SVP entrez votre prix solo ici ...!"   
                      />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="number" name="duoprice" 
                      onChange={handleChange}
+                     defaultValue={el.duoprice}
                      className ="contact-input"
-                     placeholder="SVP entrez votre prix duo ici ...!" 
                       />   
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="number" name="trioprice" 
                      onChange={handleChange}
+                     defaultValue={el.trioprice}
                      className ="contact-input"
-                     placeholder="SVP entrez votre prix trio ici ...!" 
                      />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="number" name="quatuorprice" 
                      onChange={handleChange}
+                     defaultValue={el.quatuorprice}
                      className ="contact-input"
-                     placeholder="SVP entrez votre prix quatuor ici ...!" 
                       />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="number" name="transportprice" 
                      onChange={handleChange}
+                     defaultValue={el.transportprice}
                      className ="contact-input"
-                     placeholder="SVP entrez votre prix de transport ici ...!"  
                       />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="text" name="courses" 
                      onChange={handleChange}
+                     defaultValue={el.courses}
                      className ="contact-input"
-                     placeholder="SVP entrez vos cours ...!"  
                      />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="text" name="place" 
                      onChange={handleChange}
+                     defaultValue={el.place}
                      className ="contact-input"
-                     placeholder="SVP entrez la place...!"  
                      />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="text" name="level" 
                      className ="contact-input"
                      onChange={handleChange}
-                     placeholder="SVP entrez les niveaux de vos cours ...!"  
+                     defaultValue={el.level}
                      />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="text" name="adress" 
                      onChange={handleChange}
-                     className ="contact-input"
-                     placeholder="SVP entrez votre adresse compléte ...!"   
+                     defaultValue={el.adress}
+                     className ="contact-input" 
                      />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="text" name="mobility" 
                      onChange={handleChange}
                      className ="contact-input"
-                     placeholder="SVP entrez votre mobilité ...!"
+                     defaultValue={el.mobility}
                      />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="text"  name="experience1" 
                      onChange={handleChange}
+                     defaultValue={el.experience1}
                      className ="contact-input"
-                     placeholder="SVP entrez votre dérniere expérience ...!"
                      />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="text"  name="experience2" 
                      onChange={handleChange}
+                     defaultValue={el.experience2}
                      className ="contact-input"
-                     placeholder="SVP entrez votre expérience ...!"
-                     
                       />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="text"  name="experience3" 
                      onChange={handleChange}
+                     defaultValue={el.experience3}
                      className ="contact-input"
-                     placeholder="SVP entrez votre expérience ...!"
                       />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="text" name="experience4" 
                      onChange={handleChange}
+                     defaultValue={el.experience4}
                      className ="contact-input"
-                     placeholder="SVP entrez votre expérience ...!"
                       />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="text" name="certification1" 
                      onChange={handleChange}
+                     defaultValue={el.certification1}
                      className ="contact-input"
-                     placeholder="SVP entrez votre derniére certification ...!"
                       />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="text"  name="certification2" 
                      onChange={handleChange}
+                     defaultValue={el.certification2}
                      className ="contact-input"
-                     placeholder="SVP entrez votre certification ...!"
                       />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="text"  name="certification3" 
                      onChange={handleChange}
+                     defaultValue={el.certification3}
                      className ="contact-input"
-                     placeholder="SVP entrez votre certification ...!"
                      />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="text"  name="certification4" 
                      onChange={handleChange}
+                     defaultValue={el.certification4}
                      className ="contact-input"
-                     placeholder="SVP entrez votre certification ...!"
                       />
                 </Form.Group>
                 <Form.Group className="mb-3">
                      <Form.Control type="text"  as="textarea" rows={5}  cols={40} name="method" 
                      onChange={handleChange}
+                     defaultValue={el.method}
                      className ="contact-input"
-                     placeholder="SVP entrez votre méthode de coaching ...!"
                       />
                 </Form.Group>
               </Form>
             </Modal.Body>
             <Modal.Footer>
-              <Button variant="primary" type="submit"  className="top-btn"  onClick={ () => {addPost(); hideButton()}}>Publier</Button>
+              <Button variant="primary" type="submit" onClick={Updatepost} className="top-btn">Modifier</Button>
             </Modal.Footer>
           </Modal>
-        </div>
+</div>
+</div>
+   )
 
-      </div>
-       
-      );
-    }
-    
-  export default AddPost
+ }
+
+export default UpdatePost

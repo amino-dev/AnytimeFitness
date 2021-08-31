@@ -243,10 +243,10 @@ const jwt = require("jsonwebtoken");
             process.env.JWT_SECRET,
             { expiresIn: "1d" }
           );
-          const { _id, name, lastname, email, role, fullName } = user;
+          const { _id,name, lastname, email, role, fullName, tel,city,password } = user;
           res.status(200).json({
             token,
-            user: { _id, name, lastname, email, role, fullName },
+            user: { _id, name, lastname, email, role, fullName, tel,city,password },
           });
         } else {
           return res.status(400).json({

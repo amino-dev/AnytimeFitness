@@ -20,10 +20,12 @@ export const DELETE_POST= `${SERVER_BASE_API}post/delete/:id`
 // users
 export const GET_USERS = `${SERVER_BASE_API}user/getAll`
 export const DELETE_USER= `${SERVER_BASE_API}user/delete/:id`
+export const UPDATE_USER= `${SERVER_BASE_API}user/update/:id`
 
 // coachs
 export const GET_COACHS = `${SERVER_BASE_API}coach/getAll`
 export const DELETE_COACH= `${SERVER_BASE_API}coach/delete/:id`
+export const UPDATE_COACH= `${SERVER_BASE_API}coach/update/:id`
 
 // comments
 export const GET_COMMENTS = `${SERVER_BASE_API}comment/getAll`

@@ -6,15 +6,14 @@ import {FaPen} from 'react-icons/fa'
 import { FaUserAlt, FaMapMarkerAlt, FaPhoneAlt, FaKey } from "react-icons/fa"
 import { GrMail } from "react-icons/gr"
 import Input from "../connection-page/input"
-import {UpdateCoach} from "../../../../redux/actions/coachsActions"
-import { coachSignout } from "../../../../redux/actions/coachAuthActions"
+import {UpdateUser} from "../../../../redux/actions/users-actions"
+import {signout} from "../../../../redux/actions/userAuthActions"
 
 
 const UpdateProfile = ({id,el}) => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const coachAuth = useSelector((state) => state.coachAuth);
     const dispatch = useDispatch();
     const [update,setUpdate]=useState({name:el.name,lastname:el.lastname,email:el.email,city:el.city,tel:el.tel})
     const handleChange=(e)=>{
@@ -26,16 +25,16 @@ const UpdateProfile = ({id,el}) => {
         console.log("input",update)
     }
 
-    const coachLogout = () => {
-      dispatch(coachSignout())
+    const userLogout = () => {
+      dispatch( signout())
   };
 
-    const CoachLogout = () =>{
-      window.location.reload(coachLogout())
+    const UserLogout = () =>{
+      window.location.reload(userLogout())
   }
     // update profile
     const updatePr=()=>{
-        dispatch (UpdateCoach(id,update.name, update.lastname,update.email,update.city ,update.tel))
+        dispatch (UpdateUser(id,update.name, update.lastname,update.email,update.city ,update.tel))
         console.log("update",update)
         setShow(false)
         }
@@ -73,7 +72,7 @@ const UpdateProfile = ({id,el}) => {
                            </div>
 <div className="d-flex justify-content-end">
 
-<Button  onClick={ () => {CoachLogout(); updatePr()}} className="top-btn" >Envoyer</Button>
+<Button onClick={ () => {UserLogout(); updatePr()}} className="top-btn" >Envoyer</Button>
 </div>
 </Form>
 </Modal.Body>

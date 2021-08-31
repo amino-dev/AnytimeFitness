@@ -39,7 +39,7 @@ return(
           <Nav.Link eventKey="fourth"><FaComment className="mr-3"/><span className="dashboard-link">Commentaires</span></Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="fifth"><RiMessage2Fill className="mr-3"/><span className="dashboard-link">Formulaires de contact</span></Nav.Link>
+          <Nav.Link eventKey="fifth"><RiMessage2Fill className="mr-3"/><span className="dashboard-link">Formulaires</span></Nav.Link>
         </Nav.Item>
       </Nav>
     </Col>

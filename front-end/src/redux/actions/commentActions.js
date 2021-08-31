@@ -54,7 +54,7 @@ catch (error) {
     }
   };
 
-//update a COMMENT 
+//update a comment 
 export const updateComment = (
     id,
     fullName,
