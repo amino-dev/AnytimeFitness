@@ -20,7 +20,6 @@ const Admin = require("./routes/auth/adminRoute")
 const Coach = require("./routes/auth/coachRoute")
 const Contact = require("./routes/contactRoute")
 const Post = require("./routes/postRoute")
-const Comment = require("./routes/commentRoute")
 // const Booking = require("./routes/bookingRoute")
 
 
@@ -30,7 +29,6 @@ app.use('/anytimeFitness/admin',Admin)
 app.use('/anytimeFitness/coach',Coach)
 app.use('/anytimeFitness/contact',Contact)
 app.use('/anytimeFitness/post',Post)
-app.use('/anytimeFitness/comment',Comment)
 // app.use('/anytimeFitness/booking',Booking)
 
 // import database

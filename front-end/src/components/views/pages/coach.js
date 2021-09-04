@@ -1,7 +1,7 @@
 import NavBar from "../components/common-pages/navbar"
 import Alert from "../components/common-pages/alert"
 import TopButton from "../components/coach-page/top-button"
-import PostDetail from "../components/coach-page/coach"
+import CoachPost from "../components/coach-page/coach"
 import Footer from "../components/common-pages/footer"
 
 function Coach(){
@@ -10,8 +10,7 @@ function Coach(){
   <div className="">
       <NavBar/>
       <Alert/>
-      <TopButton/>
-      <PostDetail/>
+      <CoachPost/>
       <Footer/>
     
   </div>

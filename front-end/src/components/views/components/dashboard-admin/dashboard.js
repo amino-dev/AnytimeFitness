@@ -8,7 +8,7 @@ import '../css/dashboard-coach/dashboard.css'
 import Users from "./users"
 import Coachs from './coachs';
 import Posts from './posts';
-import Comments from './comments';
+// import Comments from './comments';
 import Contact from './contact'
 
 const Dashboard = () => {
@@ -36,10 +36,7 @@ return(
           <Nav.Link eventKey="third"><FaThumbtack className="mr-3"/><span className="dashboard-link">Publications</span></Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="fourth"><FaComment className="mr-3"/><span className="dashboard-link">Commentaires</span></Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="fifth"><RiMessage2Fill className="mr-3"/><span className="dashboard-link">Formulaires</span></Nav.Link>
+          <Nav.Link eventKey="fourth"><RiMessage2Fill className="mr-3"/><span className="dashboard-link">Formulaires</span></Nav.Link>
         </Nav.Item>
       </Nav>
     </Col>
@@ -55,9 +52,6 @@ return(
            <Posts/>
         </Tab.Pane>
         <Tab.Pane eventKey="fourth">
-           <Comments/>
-        </Tab.Pane>
-        <Tab.Pane eventKey="fifth">
           <Contact/>
         </Tab.Pane>
       </Tab.Content>

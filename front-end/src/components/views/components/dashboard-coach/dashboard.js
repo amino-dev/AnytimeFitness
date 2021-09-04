@@ -25,10 +25,10 @@ return(
           <Nav.Link eventKey="first"><FaUserAlt className="mr-3"/><span className="dashboard-link">Profil</span></Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="second"><FaThumbtack className="mr-3"/><span className="dashboard-link">Publication</span></Nav.Link>
+          <Nav.Link eventKey="second"><FaThumbtack className="mr-3"/><span className="dashboard-link">Publications</span></Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="third"><FaCheck className="mr-3"/><span className="dashboard-link">Réservation</span></Nav.Link>
+          <Nav.Link eventKey="third"><FaCheck className="mr-3"/><span className="dashboard-link">Réservations</span></Nav.Link>
         </Nav.Item>
       </Nav>
     </Col>

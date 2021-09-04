@@ -82,17 +82,20 @@ catch (error) {
 }
 
 //get a post
-export const getOnePost = (id)=> async (dispatch) => {
-    try {
-      await getPost(id);
-      dispatch({
-        type:GET_POST,
-        payload:id
-    })
-    } catch (error) {
-      console.log(error);
-    }
-  };
+export const getOnePost=(id)=> async (dispatch)=> {
+  try{
+  const res = await axios.get(`http://localhost:8000/anytimeFitness/post/get/${id}`)
+  dispatch({
+      type:"GET_PUBID_SUCCEDED",
+      payload:res.data 
+
+  })
+  console.log('getPubById',res.data)
+  }
+  catch (error) {
+    console.log(error);
+                }
+  }
 
 
 //delete a post

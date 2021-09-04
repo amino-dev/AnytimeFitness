@@ -15,7 +15,7 @@ function TopButton() {
    const handleClose = () => setShow(false);
    const handleShow = () => setShow(true);
    return(
-    <div className="container mt-5 pt-2">
+    <div className="container mt-3 pt-2">
       <div className="d-flex justify-content-center">
         <Button variant="primary" className="top-btn" onClick={handleShow}>
         Comment réserver ?

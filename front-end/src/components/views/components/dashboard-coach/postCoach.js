@@ -31,7 +31,7 @@ const PostCoach = () => {
 
 <div className="container mt-5">
 {Object.keys(posts).filter((id) => {
-      if ((posts[id].name === coachAuth.user.name && posts[id].lastname === coachAuth.user.lastname)) {
+      if ((posts[id].name.toLowerCase() === coachAuth.user.name.toLowerCase() && posts[id].lastname.toLowerCase() === coachAuth.user.lastname.toLowerCase())) {
        return id
      }
     }).map(id=>

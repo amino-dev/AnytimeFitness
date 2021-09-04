@@ -15,6 +15,17 @@ module.exports = {
             res.status(500).send("server error");
           }
     },
+    //get one post
+    getPost:async(req,res)=>{
+      try {
+        const post = await postModel.findById(req.params.id);
+        res.json(post);
+    }
+    catch (error) {
+        console.error(error.message);
+        res.status(500).send("server error");
+      }
+    },
     //get a post 
     // getPost: async (req, res) => {
     //     try {

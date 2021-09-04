@@ -51,6 +51,7 @@ function App() {
           <Route exact path="/" component={Home}/>
           <Route exact path="/anytimeFitness/a-propos" component={About}/>
           <Route exact path="/anytimeFitness/nos-coachs" component={Coachs}/>
+          <Route exact path="/coach/:id" component={Coach}/>
           <Route exact path="/anytimeFitness/contact" component={Contact}/>
           <Route exact path="/anytimeFitness/connexion-coach" component={CoachConnection} />
           <Route exact path="/anytimeFitness/connexion-client" component={Connection}/>

@@ -1,4 +1,4 @@
-import { GET_POSTS, GET_POST,ADD_POST, DELETE_POST, UPDATE_POST} from "../../shared/apiUrls";
+import { GET_POSTS,ADD_POST, DELETE_POST, UPDATE_POST} from "../../shared/apiUrls";
 const initialState={
   datas : [],
   loading:true
@@ -14,14 +14,13 @@ export const postReducer = ( state = initialState, action) => {
         datas: payload,
         loading: false
       };
-    case GET_POST:
-      
-      return {
-        ...state,
-        datas: state.datas.filter(
-          data => data._id !== payload
-        ),
-      };
+      case "GET_PUBID_SUCCEDED":
+
+        return {
+          ...state,
+          datas: payload,
+          loading: false
+        };
     case ADD_POST:
      return {
       ...state,
