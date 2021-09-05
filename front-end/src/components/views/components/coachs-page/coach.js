@@ -51,7 +51,7 @@ useEffect(() => {
              <p className="">Coach de {posts[id].speciality}</p>
           </figcaption>
         </figure>
-        <div className="d-flex justify-content-center mt-3">
+        <div className="d-flex justify-content-center mt-4">
           <Link to={`/coach/${posts[id]._id}`}>
             <Button
             variant="primary" className="top-btn"

@@ -6,8 +6,7 @@ import {getAllposts} from "../../../../redux/actions/postActions"
 import TopButton from '../coach-page/top-button'
 import { Link } from 'react-router-dom'
 import "../css/coachs-page/coachs.css"
-import { useHistory } from "react-router-dom";
-
+import Booking from "./booking"
 
 export default function CoachPost({id}) {
 
@@ -87,10 +86,8 @@ export default function CoachPost({id}) {
                        </Col>
                      </Row>
                      <div className="d-flex justify-content-center mt-5">
-                       <Button  variant="primary" className="top-btn">
-                        Réserver
-                       </Button>
-                  </div>
+                        <Booking/>
+                     </div>
                  </Container>          
             </Container>
         </div>

@@ -1,27 +1,27 @@
-import { GET_COMMENTS,ADD_COMMENT, DELETE_COMMENT, UPDATE_COMMENT} from "../../shared/apiUrls";
+import { GET_BOOKINGS,ADD_BOOKING, DELETE_BOOKING, UPDATE_BOOKING} from "../../shared/apiUrls";
 const initialState={
   datas : [],
   loading:true
 } 
 
-export const commentReducer = ( state = initialState, action) => {
+export const bookingReducer = ( state = initialState, action) => {
   const { type, payload } = action;
   switch (type){
-    case GET_COMMENTS:
+    case GET_BOOKINGS:
       
       return {
         ...state,
         datas: payload,
         loading: false
       };
-    case ADD_COMMENT:
+    case ADD_BOOKING:
      return {
       ...state,
       datas: [...state.datas, payload ]
 
      };
  
-     case DELETE_COMMENT:
+     case DELETE_BOOKING:
       return {
         ...state,
         datas: state.datas.filter(
@@ -29,7 +29,7 @@ export const commentReducer = ( state = initialState, action) => {
         ),
         loading: false
       };
-      case UPDATE_COMMENT:
+      case UPDATE_BOOKING:
         return {
           ...state,
           datas: state.datas.map(data =>

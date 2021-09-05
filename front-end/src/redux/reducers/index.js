@@ -8,7 +8,7 @@ import {coachRegisterReducer} from "./coachRegisterReducers";
 import {postReducer} from "./postReducers"
 import {UsersReducer} from "./users-reducers"
 import {CoachsReducer} from "./coachs-reducers"
-import {commentReducer} from "./commentRducers"
+import {bookingReducer} from "./bookingRducers"
 
 
 export const rootReducer = combineReducers({
@@ -21,7 +21,7 @@ export const rootReducer = combineReducers({
    postReducer,
    UsersReducer,
    CoachsReducer,
-   commentReducer,
+   bookingReducer,
    contactReducer
 
    // postDetails : postDetailsReducer,

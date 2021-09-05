@@ -26,8 +26,8 @@ export const GET_COACHS = `${SERVER_BASE_API}coach/getAll`
 export const DELETE_COACH= `${SERVER_BASE_API}coach/delete/:id`
 export const UPDATE_COACH= `${SERVER_BASE_API}coach/update/:id`
 
-// comments
-export const GET_COMMENTS = `${SERVER_BASE_API}comment/getAll`
-export const ADD_COMMENT = `${SERVER_BASE_API}comment/add`
-export const UPDATE_COMMENT= `${SERVER_BASE_API}comment/update/:id`
-export const DELETE_COMMENT= `${SERVER_BASE_API}comment/delete/:id`
+// bookings
+export const GET_BOOKINGS = `${SERVER_BASE_API}booking/getAll`
+export const ADD_BOOKING = `${SERVER_BASE_API}booking/add`
+export const UPDATE_BOOKING= `${SERVER_BASE_API}booking/update/:id`
+export const DELETE_BOOKING= `${SERVER_BASE_API}booking/delete/:id`

@@ -119,22 +119,22 @@ const Api = axios.create({ baseURL: `http://localhost:${PORT}/anytimeFitness` })
  }
 
 
- //add a comment
- function addComment(fullName, course, commentaire) {
-  return Api.post("/comment/add", {fullName, course, commentaire})
+ //add a booking
+ function addBooking(coachName,clientName,bookingDate,bookingTime,speciality,place,adress) {
+  return Api.post("/booking/add", {coachName,clientName,bookingDate,bookingTime,speciality,place,adress})
 }
 
-//get all comments
-function getComments(){
-  return Api.get("/comment/getAll");
+ //get all bookings
+ function getBookings(){
+  return Api.get("/booking/getAll");
 }
 
-//delete a contact form
-function delComment(id){
-  return Api.delete(`/comment/delete/${id}`);
+//delete a booking
+function delBooking(id){
+  return Api.delete(`/booking/delete/${id}`);
 }
 
 
 
-  export {addContact,getContacts,delContact,updateContact,addPost,getPosts,getPost,delPost,updatePost,getUsers,getCoachs,addComment,getComments,delComment,delUser,delCoach}
-  export default {addContact,getContacts,delContact,updateContact,addPost,getPosts,getPost,delPost,updatePost,getUsers,getCoachs,addComment,getComments,delComment,delUser,delCoach}
+  export {addContact,getContacts,delContact,updateContact,addPost,getPosts,getPost,delPost,updatePost,getUsers,getCoachs,addBooking,getBookings,delBooking,delUser,delCoach}
+  export default {addContact,getContacts,delContact,updateContact,addPost,getPosts,getPost,delPost,updatePost,getUsers,getCoachs,addBooking,getBookings,delBooking,delUser,delCoach}
