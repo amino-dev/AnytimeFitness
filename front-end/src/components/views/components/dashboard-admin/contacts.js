@@ -11,14 +11,14 @@ import '../css/dashboard-coach/dashboard.css'
 const Contact = () => {
     const contacts = useSelector(state => state.contactReducer.datas)
      
-    // add contact forms
+    // get all contact forms
     const dispatch = useDispatch()
     useEffect(() => {
      dispatch(getAllContacts())
       }, [dispatch])
     console.log("my data",contacts)
 
-    //delete a contact form
+    // delete a contact form
     const delContact=(id)=>{
       dispatch (deleteContact(id)) 
       }

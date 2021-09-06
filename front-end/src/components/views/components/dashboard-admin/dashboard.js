@@ -1,6 +1,6 @@
 import {Tab, Nav, Row, Col } from 'react-bootstrap';
 import {RiUserSearchFill} from 'react-icons/ri'
-import {FaThumbtack,FaComment,FaUserCheck} from 'react-icons/fa'
+import {FaThumbtack,FaUserCheck,FaCalendarCheck} from 'react-icons/fa'
 import {RiMessage2Fill} from 'react-icons/ri'
 import logo from '../../../../img/logo.png'
 import {useSelector} from 'react-redux';
@@ -8,8 +8,8 @@ import '../css/dashboard-coach/dashboard.css'
 import Users from "./users"
 import Coachs from './coachs';
 import Posts from './posts';
-// import Comments from './comments';
-import Contact from './contact'
+import Bookings from './bookings'
+import Contact from './contacts'
 
 const Dashboard = () => {
     const adminAuth = useSelector((state) => state.adminAuth)
@@ -36,7 +36,10 @@ return(
           <Nav.Link eventKey="third"><FaThumbtack className="mr-3"/><span className="dashboard-link">Publications</span></Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="fourth"><RiMessage2Fill className="mr-3"/><span className="dashboard-link">Formulaires</span></Nav.Link>
+          <Nav.Link eventKey="fourth"><FaCalendarCheck className="mr-3"/><span className="dashboard-link">Réservations</span></Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="fifth"><RiMessage2Fill className="mr-3"/><span className="dashboard-link">Formulaires</span></Nav.Link>
         </Nav.Item>
       </Nav>
     </Col>
@@ -52,6 +55,9 @@ return(
            <Posts/>
         </Tab.Pane>
         <Tab.Pane eventKey="fourth">
+           <Bookings/>
+        </Tab.Pane>
+        <Tab.Pane eventKey="fifth">
           <Contact/>
         </Tab.Pane>
       </Tab.Content>

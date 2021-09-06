@@ -5,6 +5,7 @@ import {useSelector} from 'react-redux';
 import '../css/dashboard-coach/dashboard.css'
 import Profile from './profile';
 import Post from './post'
+import BookingCoach from './bookingCoach'
 
 const Dashboard = () => {
     const coachAuth = useSelector((state) => state.coachAuth)
@@ -41,7 +42,7 @@ return(
           <Post/>
         </Tab.Pane>
         <Tab.Pane eventKey="third">
-           <h1>hhhh</h1>
+          <BookingCoach />
         </Tab.Pane>
       </Tab.Content>
     </Col>

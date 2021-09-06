@@ -17,7 +17,7 @@ const Users = () => {
     }, [dispatch])
     console.log("my data",users)
 
-    //delete a user
+    // delete a user
     const delUser=(id)=>{
     dispatch (deleteUser(id)) 
     }

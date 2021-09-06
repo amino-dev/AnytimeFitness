@@ -50,7 +50,7 @@ const Api = axios.create({ baseURL: `http://localhost:${PORT}/anytimeFitness` })
     certification4,
     method) {
   return Api.post("/post/add", { 
-    name,
+            name,
             lastname,
             photo,
             speciality,

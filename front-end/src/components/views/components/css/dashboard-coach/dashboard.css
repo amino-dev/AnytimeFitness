@@ -71,3 +71,7 @@
  table {
    width: 85% !important;
  }
+
+ .home-icon {
+   margin-left: -10px !important;
+ }

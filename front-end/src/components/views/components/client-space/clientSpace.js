@@ -7,6 +7,7 @@ import {deleteUser } from '../../../../redux/actions/users-actions';
 import {useDispatch} from 'react-redux';
 import {signout} from "../../../../redux/actions/userAuthActions"
 import UpdateProfile from './updateProfile';
+import BookingUser from './bookingUser'
 
 const Profile = () => {
     const auth = useSelector((state) => state.auth)
@@ -61,6 +62,7 @@ return(
      <UpdateProfile id={auth.user._id} el={auth.user}/>
     </div>
     <h4 className="mt-5 ml-4">MES RÉSERVATIONS</h4>
+    <BookingUser/>
 </div> 
 )}
 export default Profile

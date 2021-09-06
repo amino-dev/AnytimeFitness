@@ -27,8 +27,7 @@ const bookingSchema = new Schema({
     },
     place: {
         type : String,
-        default: "Chez le client",
-        enum: ["Chez le client" , "Chez le coach" , "En plein air"]
+       required: true
     },
     adress: {
         type : String,

@@ -1,5 +1,5 @@
 import {addPost,getPosts,delPost,getPost}   from "../../services/api"
-import { GET_POSTS,GET_POST, ADD_POST, DELETE_POST, UPDATE_POST } from "../../shared/apiUrls";
+import { GET_POSTS, ADD_POST, DELETE_POST, UPDATE_POST } from "../../shared/apiUrls";
 import axios from 'axios'
 
 //add a post

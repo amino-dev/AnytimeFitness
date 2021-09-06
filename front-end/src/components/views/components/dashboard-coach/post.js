@@ -6,7 +6,7 @@ import PostCoach from "./postCoach"
 const Post= () => {
     
     return (
-      <div className="mt-4">
+      <div className="">
           <AddPost/>
           <PostCoach/>
       </div>

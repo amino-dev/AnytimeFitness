@@ -60,12 +60,14 @@ const addPost=()=>{
        x.style.display = "none";
      }
    }
-
+    
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const coachAuth = useSelector((state) => state.coachAuth)
     return (
-      <div className="mt-4">
+      <div className="">
         <Link to="/" className="ml-3 btn-icon"><FaHome className="dash-icon my-4"/></Link> 
         <div className="ml-3 mt-3">
             <Button  variant="primary" className="top-btn" id="postButton" onClick={handleShow}>

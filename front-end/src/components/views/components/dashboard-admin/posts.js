@@ -12,14 +12,14 @@ import '../css/dashboard-coach/dashboard.css'
 const Posts = () => {
   const posts = useSelector(state => state.postReducer.datas)
 
-   //get all posts
+   // get all posts
   const dispatch = useDispatch()
    useEffect(() => {
    dispatch(getAllposts())
     }, [dispatch])
    console.log("my data",posts)
 
-  //delete a post
+  // delete a post
     const delPost=(id)=>{
     dispatch (deletePost(id)) 
   }
@@ -68,12 +68,12 @@ return(
                                     </ul>
                                     <p className="coach-info"><u>Méthodologie</u>: {coach.method}</p>   
                           </Card.Text>
-                          <div className="d-flex justify-content-center">
-                          <Button className="btn-icon" ><BsFillTrashFill className="btn-icon" onClick={() => delPost(coach._id)} /></Button>
-                          </div>
                      </Card.Body>
                      </Col>
                  </Row>
+                <div className="d-flex justify-content-center">
+                  <Button className="btn-icon" ><BsFillTrashFill className="btn-icon" onClick={() => delPost(coach._id)} /></Button>
+                </div>
             </Card>
             </div>
           ))
