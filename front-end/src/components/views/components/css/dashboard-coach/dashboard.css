@@ -75,3 +75,11 @@
  .home-icon {
    margin-left: -10px !important;
  }
+
+ .hidden {
+   display: none !important;
+ }
+
+ .updateBtn {
+   margin-top: -10px !important;
+ }

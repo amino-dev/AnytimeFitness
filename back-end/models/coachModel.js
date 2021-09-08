@@ -49,7 +49,12 @@ const UserSchema = new Schema(
     },
     cv : {
       type: String
-    }
+    },
+    status: {
+      type: String,
+      default: "En attente",
+      enum: ["En attente" , "confirmé"]
+    },
   },
   { timestamps: true }
 );

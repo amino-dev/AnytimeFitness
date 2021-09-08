@@ -3,6 +3,7 @@ import {FaHome,FaUserMinus} from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { deleteCoach, getAllCoachs } from '../../../../redux/actions/coachsActions';
+import UpdateCoachStatus from "./updateCoach"
 import {useDispatch, useSelector } from 'react-redux'
 import '../css/dashboard-coach/dashboard.css'
 
@@ -53,11 +54,18 @@ return(
                             <th className="pt-3 text-center">Email</th>
                             <td className="pt-3 text-center">{coach.email}</td>
                         </tr>
+                        <tr>
+                            <th className="pt-3 text-center">Status</th>
+                            <td className="pt-3 text-center">{coach.status}</td>
+                        </tr>
                     </tbody>
                 </Table>
     </div>
     <div className="d-flex justify-content-center">
         <Button className="btn-icon" ><FaUserMinus className="btn-icon mb-5" onClick={() => delCoach(coach._id)}/></Button>
+        <div className="updateBtn">
+            <UpdateCoachStatus id={coach._id}  el={coach }/>
+        </div>
     </div>
   </div>
 ))

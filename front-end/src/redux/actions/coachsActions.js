@@ -38,14 +38,16 @@ export const UpdateCoach = (
   lastname,
   email,
   city,
-  tel) => async dispatch => {
+  tel,
+  status) => async dispatch => {
   try {
     const res = await axios.put(`http://localhost:8000/anytimeFitness/coach/update/${id}`,{  
       name,
       lastname,
       email,
       city,
-      tel}) 
+      tel,
+      status}) 
      
     dispatch({
       type: UPDATE_COACH, 

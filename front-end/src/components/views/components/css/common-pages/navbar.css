@@ -12,6 +12,10 @@ button {
     border: none !important;
 }
 
+#theme-icon {
+    width: 1.8rem;
+    cursor: pointer;
+}
 .btn{
     border-radius: 0rem !important;
 }

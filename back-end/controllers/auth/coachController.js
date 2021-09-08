@@ -42,7 +42,7 @@ const jwt = require("jsonwebtoken");
   const signin = (req, res) => {
     userModel.findOne({ email: req.body.email }).exec(async (error, user) => {
       if (error) return res.status(400).json({ error });
-      if (user) {
+      if (user && user.status === "confirmé") {
         const isPassword = await user.authenticate(req.body.password);
         if (isPassword && user.role === 'coach') {
           const token = jwt.sign(

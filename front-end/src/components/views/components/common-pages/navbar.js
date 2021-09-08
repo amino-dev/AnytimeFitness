@@ -53,7 +53,7 @@ function NavBar(){
   const AdminLogout = () =>{
     window.location.reload(adminLogout())
   }
-
+ 
   const renderLoggedInLinks = () => {
     return (
   <Navbar className={colorChange ? 'navbar colorChange' : 'navbar'} fixed="top" collapseOnSelect expand="lg" bg="light" variant="light">
@@ -123,9 +123,9 @@ function NavBar(){
  </Navbar>
     );
   };
-
-
+  
   const renderNonLoggedInLinks = () => {
+    
     return (
       <Navbar className={colorChange ? 'navbar colorChange' : 'navbar'} fixed="top" collapseOnSelect expand="lg" bg="light" variant="light">
   <Navbar.Brand><img src={logo} className="App-logo" alt="logo" /></Navbar.Brand>
