@@ -30,9 +30,9 @@ const Profile = () => {
     
 return(
 <div className='className="mt-5 pt-5'>
-    <h4 className="mt-5 py-5 ml-4">MON PROFIL</h4>
+    <h4 className="mt-5 py-5 ml-5">MON PROFIL</h4>
     <div className="d-flex justify-content-center mt-4">
-    <Table striped bordered hover size="sm" className="w-75">
+    <Table striped bordered hover size="sm" className="w-50">
                     <tbody>
                         <tr>
                             <th className="pt-3 text-center">ID</th>
@@ -61,7 +61,7 @@ return(
      <Button className="btn-icon" ><FaUserMinus className="btn-icon" onClick={ () => {UserLogout(); delUser(auth.user._id)}} /></Button>
      <UpdateProfile id={auth.user._id} el={auth.user}/>
     </div>
-    <h4 className="mt-5 ml-4">MES RÉSERVATIONS</h4>
+    <h4 className="mt-5 ml-5 mb-5">MES RÉSERVATIONS</h4>
     <BookingUser/>
 </div> 
 )}

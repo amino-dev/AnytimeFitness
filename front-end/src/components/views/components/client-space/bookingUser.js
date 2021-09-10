@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import {useSelector,useDispatch} from 'react-redux';
 import '../css/dashboard-coach/dashboard.css'
 import {useEffect} from 'react';
-import  UpdateBooking from "../dashboard-coach/updateBooking"
+import  UpdateBooking from "./updateBooking"
 import {deleteBooking, getAllBookings} from '../../../../redux/actions/bookingActions';
 
 
@@ -29,9 +29,8 @@ const BookingUser = () => {
     }
         return (
 
-  <div className="container ">
-    <Link to="/" className="btn-icon"><FaHome className="dash-icon home-icon my-4"/></Link> 
-  {Object.keys(bookings).filter((id) => {
+  <div className="container"> 
+    {Object.keys(bookings).filter((id) => {
       if ((bookings[id].clientName.toLowerCase() === auth.user.fullName.toLowerCase())) {
        return id
      }

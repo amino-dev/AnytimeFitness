@@ -50,7 +50,7 @@ function ContactForm(){
        <div className="text-center mb-4">
              <p>Une question ? Besoin d'aide ou d'informations ?</p>
              <p>Nous sommes à votre écoute. N'hésitez pas à nous contacter !</p>
-             <p>🎁 Si vous souhaitez offrir un bon cadeau, pensez à le préciser afin que nous puissions vous l'envoyer.</p>
+             <p>🎁 Si vous souhaitez offrir un bon cadeau, pensez à le préciser afin que nous puissions vous l'envoyer. 🎁</p>
        </div>      
       <Form className="form contact-form" noValidate validated={validated} onSubmit={handleSubmit} id="contact-form" >
             <Form.Group  className="mb-5">

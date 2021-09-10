@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 
 const AddPost= () => {
-    
+
 const [input,setInput]=useState({
             name: "",
             lastname:"",
@@ -43,8 +43,10 @@ const handleChange=(e)=>{
     console.log("input",input)
 }
 
+const coachAuth = useSelector((state) => state.coachAuth)
+
 const addPost=()=>{
-  dispatch (addNewPost( input.name,input.lastname,input.photo,input.speciality ,input.description, input.soloprice, input.duoprice,
+  dispatch (addNewPost(coachAuth.user.name,coachAuth.user.lastname,input.photo,input.speciality ,input.description, input.soloprice, input.duoprice,
     input.trioprice, input.quatuorprice, input.transportprice,input.place,input.courses,input.level,
     input.adress,input.mobility,input.experience1,input.certification1,input.experience2,input.certification2,input.experience3,input.certification3,input.experience4,input.certification4,input.method)) 
   console.log("inpuuuuuuuuuuuut",input)
@@ -65,7 +67,6 @@ const addPost=()=>{
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const coachAuth = useSelector((state) => state.coachAuth)
     return (
       <div className="">
         <Link to="/" className="ml-3 btn-icon"><FaHome className="dash-icon my-4"/></Link> 
@@ -84,7 +85,7 @@ const addPost=()=>{
             </Modal.Header>
             <Modal.Body>
               <Form>
-              <Form.Group className="mb-3">
+              {/* <Form.Group className="mb-3">
                      <Form.Control type="string" name="name"
                      onChange={handleChange}
                      className ="contact-input"
@@ -97,7 +98,7 @@ const addPost=()=>{
                      className ="contact-input"
                      placeholder="SVP entrez votre nom de famille ...!" 
                      />
-                </Form.Group>
+                </Form.Group> */}
                 <Form.Group className="mb-3">
                      <Form.Control type="url" name="photo"
                      onChange={handleChange}

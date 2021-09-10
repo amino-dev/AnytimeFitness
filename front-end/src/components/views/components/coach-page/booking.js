@@ -12,6 +12,7 @@ export default function Booking({id}) {
 
      const coach = useSelector(state => state.postReducer.datas)
      const auth = useSelector((state) => state.auth)
+     
      const [input,setInput]=useState({
       coachName : "",
       clientName : "",
@@ -34,12 +35,12 @@ export default function Booking({id}) {
      const dispatch = useDispatch()
 
      const addBooking=()=>{
-      dispatch (addNewBooking( input.coachName,input.clientName,input.bookingDate,input.bookingTime ,input.speciality, input.place, input.adress)) 
+      dispatch (addNewBooking(coach.name + " " + coach.lastname,auth.user.fullName,input.bookingDate,input.bookingTime ,input.speciality, input.place, input.adress)) 
       console.log("inpuuuuuuuuuuuut",input)
       setShow(false)
       }
 
-     
+
      const renderNonLoggedInLinks = () => {
         return (
          <Container>
@@ -62,10 +63,10 @@ export default function Booking({id}) {
    
 
       useEffect(() => {
-        dispatch(getOnePost());
+        dispatch(getOnePost({id}));
       },[]);
       console.log(coach, "post by id");
-      const renderLoggedInLinks = (id) => {
+      const renderLoggedInLinks = () => {
         return (
          <Container>
             <div className="d-flex justify-content-center">
@@ -82,21 +83,21 @@ export default function Booking({id}) {
               <Modal.Title>Réserver avec votre coach</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <Form>
-                <Form.Group className="mb-3">
+               <Form>
+                {/* <Form.Group className="mb-3">
                      <Form.Control type="text" name="coachName"
                      onChange={handleChange}
                      className ="contact-input"
                      placeholder="SVP entrez le nom du coach choisi ...!" 
                      />
-                </Form.Group>
-                <Form.Group className="mb-3">
+                </Form.Group> */}
+                {/* <Form.Group className="mb-3">
                      <Form.Control type="text" name="clientName"
                      onChange={handleChange}
                      className ="contact-input"
                      placeholder="SVP entrez votre nom complet ...!" 
                      />
-                </Form.Group>
+                </Form.Group> */}
                 <Form.Group className="mb-3">
                      <Form.Control type="text" name="speciality"
                      onChange={handleChange}
