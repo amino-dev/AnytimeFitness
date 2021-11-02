@@ -34,10 +34,6 @@ return(
     <Table striped bordered hover size="sm" width="100%">
                     <tbody>
                         <tr>
-                            <th className="pt-3 text-center">ID</th>
-                            <td className="pt-3 text-center">{coachAuth.user._id}</td>
-                        </tr>
-                        <tr>
                             <th className="pt-3 text-center">Nom</th>
                             <td className="pt-3 text-center">{coachAuth.user.name} {coachAuth.user.lastname}</td>
                         </tr>
